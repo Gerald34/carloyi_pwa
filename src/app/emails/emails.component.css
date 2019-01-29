@@ -1,0 +1,102 @@
+.theMail {
+  margin-top: 5rem;
+  width: 70%;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius:0.4rem;
+  border:2px solid #fff;
+  overflow: hidden;
+}
+
+.helloMsg small {
+  font-size: 0.8rem;
+}
+
+.carloyi {
+  background: #3d6983;
+  margin: 0;
+  padding: 0.7rem;
+}
+
+.helloMsg {
+  background: whitesmoke;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: #3d6983;
+  padding: 0.7rem;
+}
+
+.requestBody {
+  padding: 0.2rem 0 1rem 0;
+}
+
+.col-60 {
+  width: 50%;
+  float: left;
+  padding:1rem;
+  color: #999999;
+}
+
+.col-40 {
+  width: 50%;
+  float: right;
+  padding:1rem;
+}
+
+.col-30 {
+  width: 33.33333%;
+  float: right;
+  padding:1rem;
+}
+
+.requestedCar {
+
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  border-radius:0.2rem;
+  border:1px solid #fff;
+  overflow: hidden;
+}
+
+.mailcontent {
+
+  color: #999999;
+}
+
+.mailcontent p {
+  line-height: 16px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+.theBold {
+  font-weight: 500;
+}
+
+.mailHeader {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.activate, .mailFooter {
+  clear: both;
+  width: 100%;
+  display: block;
+  padding: 0.7rem;
+  background: #3d6983;
+  color: whitesmoke;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.mailFooter h2 {
+  font-size: 1rem;
+}

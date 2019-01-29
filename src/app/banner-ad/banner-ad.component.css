@@ -1,0 +1,197 @@
+@media (min-width: 200px) {
+
+  #background {
+    background-image: url('../../assets/images/girl.jpg');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    background-size: cover;
+    padding-top: 180px;
+  }
+
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 8% auto 0;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .smartest h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  #background {
+    background-image: url('../../assets/images/girl.jpg');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    background-size: cover;
+    padding-top: 40px;
+  }
+
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 10% auto 0;
+    padding: 10px 20px;
+  }
+
+  .smartest h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  #background {
+    background-image: url('../../assets/images/girl.jpg');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    background-size: cover;
+    padding-top: 40px;
+  }
+
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 10% auto 0;
+    padding: 10px 20px;
+  }
+
+  .smartest h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .smartest {
+    width: 1000px;
+    left: 20px;
+    position: absolute;
+    z-index: 10;
+    margin: 21% auto 0;
+  }
+
+  .smartest h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: left;
+    font-size: 22px;
+  }
+
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .whyContent p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+}

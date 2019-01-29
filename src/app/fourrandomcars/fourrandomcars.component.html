@@ -1,0 +1,52 @@
+<div class="row">
+  <div id="each_car" class="col-lg-3 col-md-3 col-sm-12 animated fadeIn" *ngFor="let filterCar of randomCars">
+
+    <a class="tooltips badge badge-info">{{ filterCar.total_score }}
+      <span>Rating</span>
+    </a>
+
+    <div id="car">
+      <div class="card">
+
+        <div class="infoOverlay">
+          <div id="each_car_overlay"></div>
+          <h1 class="carInformation">
+            <fa-icon icon="info-circle"></fa-icon>
+            <br>
+            <small>Get Vehicle Information</small>
+          </h1>
+        </div>
+
+        <img class="img-fluid" [src]="(imagepath + filterCar.car_image)"/>
+
+        <div class="card-body car_info">
+
+          <h4>{{ filterCar.name }}</h4>
+
+          <div class="seperator"></div>
+          <h5>Retail Price |
+            <span>{{ filterCar.price | currency:'ZAR':"symbol-narrow" }}</span>
+          </h5>
+
+          <div *ngIf="type; else originalTypes">
+            <h5>Vehicle Type |
+              <span>{{ type }}</span>
+            </h5>
+          </div>
+
+          <ng-template #originalTypes>
+            <h5>Vehicle Type |
+              <span>{{ filterCar.car_type }}</span>
+            </h5>
+          </ng-template>
+
+          <input #suggestionID class="itemID" type="hidden" [value]="filterCar.id">
+        </div>
+
+      </div>
+    </div>
+
+    <!--<app-car-result [carResult]="filterCar"></app-car-result>-->
+  </div>
+</div>
+

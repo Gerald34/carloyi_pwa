@@ -1,0 +1,361 @@
+
+.options_header {
+  text-align: center;
+}
+
+.options_header h1 {
+  font-size: 1.1rem;
+  color: #4aa0d5;
+  text-align: center !important;
+}
+
+.writeup {
+  width: 100%;
+  max-width: 70%;
+  margin: 1rem auto;
+  display: block;
+}
+
+.options_header p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+  color: #888;
+  text-align: center !important;
+}
+
+.budget_output {
+  background-color: white;
+  padding: 1.4rem;
+}
+
+.budget_output h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #a2a2a2;
+  line-height: 1.7rem;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.per_month {
+  font-size: 0.99rem;
+  font-style: italic;
+  color: #4aa0d5;
+}
+
+.budget_output p {
+  text-align: center;
+  color: #a2a2a2;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.the_tabs {
+  background-color: #4aa0d5;
+  padding: 0.95rem 0.8rem 0.6rem 0.8rem;
+}
+
+.the_tabs h3 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+.tab-content {
+  padding: 2rem 0;
+  max-width: 80%;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+
+.faded-bg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.faded-bg::after {
+  background-image: url('../../assets/images/carnet_background.jpg');
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  opacity: 0.055;
+}
+
+.similar_cars {
+  color: #888;
+  margin-top: 2.2rem;
+}
+
+.similar_cars h4 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.the_options {
+
+}
+
+.the_btns {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.searchBtn {
+  color: whitesmoke;
+  padding: 0.6rem 45px;
+  font-weight: 600;
+  border-radius: 0;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.resetBtn {
+  background-color: red;
+}
+
+.updateBtn {
+  background-color: #4aa0d5;
+}
+
+.resetBtn:hover {
+  background-color: #cc0000;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.updateBtn:hover {
+  background-color: #4188b5;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.similar_cars_results {
+  padding: 0 0 4rem 0;
+}
+
+#car {
+  padding-bottom: 1.5rem;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.car_image {
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #eee;
+  -webkit-box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.6);
+}
+
+.car_info {
+  text-align: center;
+}
+
+.car_info h4 {
+  color: #999999;
+  font-size: 0.8rem;
+}
+
+.car_info h5 {
+  color: #999999;
+  font-size: 0.7rem;
+}
+
+.car_info h5 span {
+  color: #4aa0d5;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+.car_info .seperator {
+  height: 2px;
+  background-color: #4aa0d5;
+  width: 70%;
+  display: block;
+  margin: 0 auto 0.6rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 200px) {
+  .options_header {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 375px) {
+  .searchBtn {
+    float: left;
+    margin-right: 2.7rem !important;
+  }
+
+  .options_header {
+    padding: 1.4rem;
+    margin-top: 5.6rem;
+    text-align: center;
+  }
+
+  .options_header h1 {
+    font-size: 1rem;
+    color: #4aa0d5;
+    text-align: center !important;
+  }
+
+  .budget_output {
+    background-color: white;
+    padding: 1.4rem;
+  }
+
+  .budget_output h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #a2a2a2;
+    line-height: 1.7rem;
+  }
+
+  .per_month {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #4aa0d5;
+  }
+
+  .budget_output p {
+    text-align: center;
+    color: #a2a2a2;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  .the_tabs h3 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .options_header {
+    padding: 1.4rem 0 1.1rem;
+    margin-top: 3.3rem;
+    text-align: center;
+  }
+
+  .options_header h1 {
+    font-size: 1.15rem;
+    color: #4aa0d5;
+    font-weight: 400;
+    text-align: center !important;
+  }
+
+  .budget_output {
+    background-color: white;
+    padding: 1.4rem;
+  }
+
+  .budget_output h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #a2a2a2;
+    line-height: 1.7rem;
+  }
+
+  .per_month {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #4aa0d5;
+  }
+
+  .budget_output p {
+    text-align: center;
+    color: #a2a2a2;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .the_tabs h3 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.1rem;
+  }
+
+}
+
+.moreCarInfo {
+  padding: 3rem 1.5rem;
+  background: #504c99;
+  width: 100%;
+}
+
+.tabs {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.searchResults {
+  width: 100% !important;
+}

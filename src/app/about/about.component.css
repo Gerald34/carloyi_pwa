@@ -1,0 +1,62 @@
+.contactheader {
+  text-align: center;
+  color: whitesmoke;
+  width: 100%;
+  background: #006885;
+  background-image: url('../../assets/images/bg_1.jpg');
+  padding: 4.3rem 0;
+  margin: 3.2rem 0 0 0;
+  -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3);
+}
+
+.contactheader p {
+  font-weight: 200;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  opacity: 0.9;
+}
+
+.contactInfo {
+    text-align: left;
+    margin: 2rem auto 2rem;
+}
+
+.contactheader h1 {
+    text-align: center;
+    color:whitesmoke;
+    font-size: 2.4rem;
+  font-weight: 200;
+}
+
+.contactInfo h2 {
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #4aa0d5;
+  border-bottom: whitesmoke 1px solid;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05rem;
+}
+
+.contactInfo p {
+  border-bottom: whitesmoke 1px solid;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  color: #909091;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.contactInfo li {
+  color: #909091;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+.contactInfo a {
+    font-weight: 500;
+    color: #888;
+}

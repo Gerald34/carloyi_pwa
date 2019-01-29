@@ -1,0 +1,197 @@
+
+@media (min-width: 200px) {
+
+  .userItem {
+    float: left;
+    width:100%;
+    height: auto;
+  }
+
+  .user {
+    width: 100%;
+    padding: 1rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+    cursor: pointer;
+    float: left;
+  }
+
+  .user:hover {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    background: white;
+    position: relative;
+  }
+
+  .activeChat {
+    /* background: #006885; */
+    background: white;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    color: #006885;
+    border-right: 0 solid #006885;
+  }
+
+  .avatar {
+    width: 20%;
+    float: left;
+    border-right: solid rgb(228, 228, 228) 1px;
+  }
+
+  .avatar img {
+    width: 42px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .userInfo {
+    width: 80%;
+    float: right;
+    height: 100%;
+    padding: 5px 0 0 20px;
+    line-height: 0;
+  }
+
+  .userInfo h3 {
+    font-size: 15px;
+    color: rgb(126, 126, 126);
+    font-weight: 400;
+    line-height: 1px;
+  }
+
+  .userInfo h4 {
+    font-size: 12px;
+    color: rgba(126, 126, 126, 0.4);
+    font-weight: 400;
+  }
+
+  .userInfo p {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(126, 126, 126, 0.4);
+  }
+
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 100%;
+    z-index: 1000;
+    border: 1px solid #fff;
+    margin-top: -15px;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.5);
+  }
+
+  .online {
+    background: #00e100;
+  }
+
+  .offline {
+    background: #ff0000;
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+  .userItem {
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+
+  .user {
+    width: 100%;
+    padding: 1rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+    cursor: pointer;
+    float: left;
+  }
+
+  .user:hover {
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    background: white;
+    position: relative;
+  }
+
+  .activeChat {
+    /* background: #006885; */
+    background: white;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    color: #006885;
+    border-right: 0 solid #006885;
+  }
+
+  .avatar {
+    width: 20%;
+    float: left;
+    border-right: solid rgb(228, 228, 228) 1px;
+  }
+
+  .avatar img {
+    width: 42px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .userInfo {
+    width: 80%;
+    float: right;
+    height: 100%;
+    padding: 5px 0 0 20px;
+    line-height: 0;
+  }
+
+  .userInfo h3 {
+    font-size: 15px;
+    color: rgb(126, 126, 126);
+    font-weight: 400;
+    line-height: 1px;
+  }
+
+  .userInfo h4 {
+    font-size: 12px;
+    color: rgba(126, 126, 126, 0.4);
+    font-weight: 400;
+  }
+
+  .userInfo p {
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(126, 126, 126, 0.4);
+  }
+
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 100%;
+    z-index: 1000;
+    border: 1px solid #fff;
+    margin-top: -15px;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.5);
+  }
+
+  .online {
+    background: #00e100;
+  }
+
+  .offline {
+    background: #ff0000;
+  }
+}

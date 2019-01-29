@@ -1,0 +1,72 @@
+<div class="newsletter_info">
+
+  <h4>Subscribe To Our Newsletter</h4>
+
+  <div id="newsletter">
+    <form class="row" #newsletter="ngForm" id="theNewsletterForm">
+
+      <div class="form-group col-lg-6 col-md-6 col-sm-12">
+        <input
+          id="nameNews"
+          name="nameNews"
+          type="text"
+          class="form-control"
+          aria-describedby="emailHelp"
+          placeholder="Your Name"
+          ngModel
+          required
+          pattern="[a-zA-Z][a-zA-Z ]+"
+          #nameNewsletter>
+
+        <!-- Validation Message -->
+        <div *ngIf="nameNewsletter.touched" class="formErrors">
+          <div *ngIf="nameNewsletter.errors?.required">
+            Name is required.
+          </div>
+
+          <div *ngIf="nameNewsletter.errors?.pattern">
+            Name is invalid.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group col-lg-6 col-md-6 col-sm-12">
+
+        <input
+          id="emailNews"
+          name="emailNews"
+          type="email"
+          class="form-control"
+          aria-describedby="emailHelp"
+          placeholder="Email Address"
+          ngModel
+          required
+          pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+          #emailNewsletter>
+
+        <!-- Validation Message -->
+        <div *ngIf="emailNewsletter.touched" class="formErrors">
+          <div *ngIf="emailNewsletter.errors?.required">
+            Email is required.
+          </div>
+
+          <div *ngIf="emailNewsletter.errors?.pattern">
+            Email is invalid.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group col-lg-12 col-md-12 col-sm-12">
+        <button (click)="newsletterSignUp(nameNewsletter.value, emailNewsletter.value)"
+                [disabled]="newsletter.invalid"
+                class="btn mb-1" id="subscribe-button">
+          <fa name="telegram"></fa> Subscribe Now
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

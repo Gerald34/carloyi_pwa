@@ -1,0 +1,55 @@
+ /* Media Queries */
+ @media (min-width: 320px) {
+   .options_header {
+      /* background-color: #f7f8fa; */
+      margin-top: 3.8rem;
+      padding: 2rem;
+      text-align: center;
+   }
+
+   .options_header h1 {
+      font-size: 1.2rem;
+      color:#006885;
+   }
+
+   .options_header h2 {
+     font-size: 2rem;
+     font-weight: 400;
+     color: #006885;
+   }
+
+   .options_header p {
+     font-size: 0.8rem;
+     font-weight: 400;
+     color:#898989;
+   }
+ }
+
+ @media (min-width: 1024px) {
+   .options_header {
+      /* background-color: #f7f8fa; */
+      padding:1.4rem 0 1.1rem;
+      margin-top: 3.3rem;
+      text-align: center;
+   }
+
+   .options_header h1 {
+      font-size: 1.15rem;
+      color: #006885;
+      font-weight: 400;
+      text-align: center !important;
+   }
+
+   .options_header h2 {
+     font-size: 2rem;
+     font-weight: 400;
+     color: #006885;
+   }
+
+   .options_header p {
+     font-size: 0.8rem;
+     font-weight: 400;
+     color:#898989;
+   }
+
+  }

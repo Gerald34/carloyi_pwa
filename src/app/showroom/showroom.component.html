@@ -1,0 +1,365 @@
+<section class="headerCol">
+
+  <div class="userInfoContainer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+
+          <div class="userHeader">
+            <h5>Hello {{ name }} {{ surname }}</h5>
+
+            <p>
+              Username: {{ userDataInfo.username }} |
+<a class="logout" (click)="logout()">
+                Logout
+              </a>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3">
+          <a (click)="suitabilitySearch()" class="addCars">Add cars to showroom</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="shadow">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 tabs tabs-style-bar">
+          <nav>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+              <li class="nav-item">
+                <a id="budget-tab" data-toggle="tab" href="#home" class="icon icon-home active" role="tab" aria-controls="home" aria-selected="true">
+                  <span>Showroom</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a id="offers-tab" data-toggle="tab" href="#offers" class="icon icon-home" role="tab" aria-controls="offers" aria-selected="false">
+                  <span>Offers</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a id="chats-tab" data-toggle="tab" href="#chats" class="icon icon-box" role="tab" aria-controls="chats" aria-selected="false">
+                  <span>Chat Room</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a id="profile-tab" data-toggle="tab" href="#my_profile" class="icon icon-box" role="tab" aria-controls="profile" aria-selected="false">
+                  <span>My Profile</span>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div class="faded-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <section class="the_options">
+
+          <div>
+            <div class="tabs tabs-style-bar">
+              <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="budget-tab">
+                  <app-showroom-cars></app-showroom-cars>
+                </div>
+
+                <div class="tab-pane fade" id="offers" role="tabpanel" aria-labelledby="offers-tab">
+                  <app-client-offers></app-client-offers>
+                </div>
+
+                <div class="tab-pane fade" id="my_profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="">
+                    <app-client-profile></app-client-profile>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="chats" role="tabpanel" aria-labelledby="chats-tab">
+                  <div class="">
+                    <app-chats></app-chats>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--
+          <div *ngIf="status === 0">
+            <div class="tabs tabs-style-bar">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="budget-tab">
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="wishlistHeader">
+                        <h1 class="">All cars in your personal showroom</h1>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 cars" *ngFor="let userCars of allUserCars">
+
+                      <div class="card">
+                        <img class="img-fluid" [src]="(imagepath + userCars.car_image)" [alt]="userCars.name"/>
+                        <div class="card-body">
+                          <div class="car_info">
+                            <h4>{{ userCars.name }}</h4>
+                            <div class="seperator"></div>
+                            <h5>Retail Price |
+                              <span>
+                                      {{ userCars.price | currency:'ZAR':"symbol-narrow" }}
+                                    </span>
+                            </h5>
+                            <p>{{ userCars.description }}</p>
+
+                            <input #itemID class="itemID" type="hidden" [value]="userCars.id">
+                            <input type="hidden" #uid [value]="userDataInfo.id">
+                            <a class="btn mb-1 requestButton"
+                               (click)="sendRequest(itemID.value, uid.value)">
+                              <fa name="telegram"></fa> Get Offers Now...
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="tab-pane fade" id="offers" role="tabpanel" aria-labelledby="offers-tab">
+                  <app-client-offers></app-client-offers>
+                </div>
+
+                <div class="tab-pane fade show active" id="my_profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="" >
+                    <app-client-profile></app-client-profile>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+-->
+        </section>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--
+<app-footer class="footer"></app-footer>
+-->
+<section>
+  <!-- Modal Registration-->
+  <div class="modal fade profile" id="updateProfile" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update your Carloyi account profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <form>
+
+                  <div class="form-group">
+                    <input [value]="userDataInfo.email" required disabled #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We won't share your email with anyone else.</small>
+                  </div>
+
+                  <div class="form-group">
+                    <input [value]="userDataInfo.name" disabled #firstName type="text" class="form-control" id="name" placeholder="First Name">
+                  </div>
+
+                  <div class="form-group">
+                    <input [value]="userDataInfo.lastName" disabled #lastName type="text" class="form-control" id="surname" placeholder="Last Name">
+                  </div>
+
+                  <div class="form-group">
+                    <input #contactNumber [value]="userDataInfo.contactNumber" type="text" class="form-control" id="contacts" placeholder="Contact Number">
+                  </div>
+
+      <div class="form-group">
+
+              <span *ngIf="nationalityObject === true; else noNationality">
+                <select (change)="onNationalityChange($event)" class="form-control">
+
+                  <option selected
+                          [value]="userDataInfo.nationality">
+                    {{ userDataInfo.nationality }}
+                  </option>
+
+                  <option
+                    *ngFor="let nation of nations"
+                    [value]="nation.name">
+                    {{ nation.name }}
+                  </option>
+
+                </select>
+              </span>
+
+        <ng-template #noNationality>
+
+          <select (change)="onNationalityChange($event)" class="form-control">
+
+            <option value="0" selected>Select Nationality</option>
+
+            <option
+              *ngFor="let nation of nations"
+              [value]="nation.name">
+              {{ nation.name }}
+            </option>
+
+          </select>
+
+        </ng-template>
+
+      </div>
+
+      <div class="form-group">
+        <span *ngIf="userDataInfo.gender !=='undefined'; else noGender">
+
+          <select (change)="onGenderChange($event)" class="form-control">
+             <option selected
+                     [value]="userDataInfo.gender">
+                    {{ userDataInfo.gender }}
+             </option>
+
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+             <option value="other">Other</option>
+          </select>
+
+        </span>
+
+        <ng-template #noGender>
+
+          <select #gender class="form-control">
+            <option value="0" selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+        </ng-template>
+
+      </div>
+
+                  <div class="form-group form-check">
+
+                    <input (change)="toggleEditable($event)"
+                     type="checkbox"
+                     class="form-check-input"
+                     id="exampleCheck1"
+                     name="agreement"
+                     required
+                     #agreement>
+                    <label class="form-check-label" for="exampleCheck1">I accept
+                      <a [routerLink]="['about']">terms of use</a>
+                    </label>
+                  </div>
+                  <input type="hidden" [value]="userDataInfo.id" #userID>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button (click)="getUpdateData(
+              email,
+              firstName,
+              lastName,
+              contactNumber,
+              userID)" class="updateBTN">
+            Update My Profile
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="offerDataSuccess == true; else noOfferData">
+  <app-book-a-test-drive [offer]="offerInformation"></app-book-a-test-drive>
+</section>
+
+<ng-template #noOfferData></ng-template>
+
+<section>
+  <!-- Modal Registration-->
+  <div class="modal fade extras" id="register" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Request Offer</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <form #requestOffer>
+                  <input #requestID class="itemID" type="hidden" [value]="itemID_1">
+                  <input type="hidden" #userID [value]="uid_1">
+                  <input type="hidden" #userEmail [value]="user_email_1">
+                  <div class="form-group col-lg-12">
+                    <textarea name="extras" type="text" class="form-control" placeholder="All the extras" ngModel #extras rows="6"></textarea>
+                    <small class="form-text text-muted-1">We endeavour to respond to all queries within 8 working hours.</small>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+
+          <div>
+            <button style="background-color: #f9a45e !important;"
+                    (click)="sendRequest(requestID.value, userID.value, userEmail.value, extras.value)"
+                    class="btn loginBtn">
+              Send Request
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

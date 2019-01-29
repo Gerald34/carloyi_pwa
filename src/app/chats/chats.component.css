@@ -1,0 +1,150 @@
+@media (min-width: 200px) {
+
+  .chatWindow {
+    margin: 26.5% auto 0 auto;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    background: white;
+    min-height: 501px;
+    -webkit-box-shadow: 0 15px 40px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 15px 40px 0 rgba(0,0,0,0.12);
+    border: 1px solid #f3f3f3;
+  }
+
+  .users {
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 50%;
+    float: left;
+    border-right: solid 1px #eee;
+  }
+
+  .conversation {
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 50%;
+    float: right;
+  }
+
+  .users h2, .conversation h2 {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .ChatHeader {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    z-index: 1000;
+    float: left;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .UserList {
+    background: #fafafa;
+    z-index: 0;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: auto;
+    white-space: nowrap;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .userList::before {
+    -webkit-box-shadow: 10px 0 40px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0 40px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .threads {
+    z-index: 0;
+    width: 100%;
+    height: 88.8%;
+    float: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .chatWindow {
+    margin: 4.5% auto 0 auto;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    border-radius: 2px;
+    background: white;
+    min-height: 501px;
+    -webkit-box-shadow: 0 15px 40px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 15px 40px 0 rgba(0,0,0,0.12);
+    border: 1px solid #f3f3f3;
+  }
+
+  .users {
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 25%;
+    float: left;
+    border-right: solid 1px #eee;
+  }
+
+  .conversation {
+    padding-left: 20px;
+    padding-top: 8px;
+    width: 75%;
+    float: right;
+  }
+
+  .users h2, .conversation h2 {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .ChatHeader {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    z-index: 1000;
+    float: left;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .UserList {
+    background: #fafafa;
+    z-index: 0;
+    width: 25%;
+    height: 501px;
+    left: 0;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: normal;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .userList::before {
+    -webkit-box-shadow: 10px 0 40px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 0 40px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .threads {
+    z-index: 0;
+    width: 75%;
+    height: 88.8%;
+    float: left;
+  }
+}
+
+

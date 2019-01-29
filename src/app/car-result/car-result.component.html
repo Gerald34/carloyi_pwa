@@ -1,0 +1,49 @@
+<a class="tooltips badge badge-info">{{ total_score }}
+  <span>Rating</span>
+</a>
+
+<div (click)="affordability.fetchCarInfo(id)"
+     id="car"
+     data-toggle="modal"
+     data-target=".carInfo">
+  <div class="card">
+
+    <div class="infoOverlay">
+      <div id="each_car_overlay"></div>
+      <h1 class="carInformation">
+        <fa-icon icon="info-circle"></fa-icon>
+        <br>
+        <small>Get Vehicle Information</small>
+      </h1>
+    </div>
+
+    <img class="img-fluid" [src]="(imagepath + car_image)"/>
+
+    <div class="card-body car_info">
+
+      <h4>{{ name }}</h4>
+
+      <div class="seperator"></div>
+      <h5>Retail Price |
+        <span>{{ price | currency:'ZAR':"symbol-narrow" }}</span>
+      </h5>
+
+      <div *ngIf="type; else originalTypes">
+        <h5>Vehicle Type |
+          <span>{{ type }}</span>
+        </h5>
+      </div>
+
+      <ng-template #originalTypes>
+        <h5>Vehicle Type |
+          <span>{{ car_type }}</span>
+        </h5>
+      </ng-template>
+
+      <input #suggestionID class="itemID" type="hidden" [value]="id">
+    </div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,103 @@
+<!--
+<mdb-carousel [isControls]="true"
+              [type]="'carousel-multi-item'"
+              [animation]="'slide'"
+              [interval]="0"
+              [noWrap]="false"
+              [keyboard]="true"
+              class="carousel-multi-item multi-animation">
+
+          <span class="row" *ngFor="let car of carList; let i = index">
+
+            <mdb-slide *ngIf=" i % 4 === 0 " class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-12 animated zoomIn"
+                     data-t-show="1"
+                     *ngFor="let car of carList.slice(i,i+4)">
+
+                  <a *ngIf="car.total_score"
+                     class="tooltips badge badge-info">
+                    {{ car.total_score }}
+                    <span>Rating</span>
+                  </a>
+
+                  <div id="car" (click)="afford.fetchCarInfo(itemID.value)"
+                       data-toggle="modal"
+                       data-target=".carInfo">
+                    <div class="card">
+
+                      <div class="infoOverlay">
+                        <div id="each_car_overlay"></div>
+                        <h1 class="carInformation">
+                          <small>Get Vehicle Information</small>
+                        </h1>
+                      </div>
+
+                      <img class="img-fluid" [src]="(path.imagePath + car.car_image)" />
+
+                      <div class="card-body car_info">
+                        <h4>{{ car.name }}</h4>
+                        <div class="seperator"></div>
+                        <h5>Retail Price |
+                          <span>{{ car.price | currency:'ZAR':"symbol-narrow" }}</span>
+                        </h5>
+                        <h5>Vehicle Type | {{ car.car_type }}</h5>
+                        <input #itemID class="itemID" type="hidden" [value]="car.id">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </mdb-slide>
+
+          </span>
+
+</mdb-carousel>
+-->
+
+<ngx-carousel [inputs]="carouselTileOne">
+
+  <ngx-tile class="animated zoomIn" id="car" NgxCarouselItem *ngFor="let car of carList; let i = index">
+
+    <div>
+
+      <a *ngIf="car.total_score"
+         class="tooltips badge badge-info">
+        {{ car.total_score }}
+        <span>Rating</span>
+      </a>
+
+      <div (click)="afford.fetchCarInfo(itemID.value)"
+           data-toggle="modal"
+           data-target=".carInfo">
+        <div class="card">
+
+          <div class="infoOverlay">
+            <div id="each_car_overlay"></div>
+            <h1 class="carInformation">
+              <small>Get Vehicle Information</small>
+            </h1>
+          </div>
+
+          <img class="img-fluid" [src]="(path.imagePath + car.car_image)" />
+
+          <div class="card-body car_info">
+            <h4>{{ car.name }}</h4>
+            <div class="seperator"></div>
+            <h5>Retail Price |
+              <span>{{ car.price | currency:'ZAR':"symbol-narrow" }}</span>
+            </h5>
+            <h5>Vehicle Type | {{ car.car_type }}</h5>
+            <input #itemID class="itemID" type="hidden" [value]="car.id">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </ngx-tile>
+
+  <button NgxCarouselPrev class="leftRs">&lt;</button>
+  <button NgxCarouselNext class="rightRs">&gt;</button>
+</ngx-carousel>

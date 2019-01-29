@@ -1,0 +1,235 @@
+<section id="app-background">
+  <div class="container">
+    <div class="row align-items-start">
+
+      <div class="options">
+        <div class="row">
+          <div class="col-lg-12 slider-header animated fadeIn">
+            <!--<h1>New car shopping</h1>-->
+            <div class="text-container">
+              <p>
+                Buy a new car with just a few clicks
+              </p>
+            </div>
+            <a id="more" (click)="moveDown()">SEARCH YOUR DREAM CAR</a>
+          </div>
+          <div class="col-lg-4 down animated fadeIn items-col">
+            <app-select-car></app-select-car>
+          </div>
+
+          <div class="col-lg-4 animated fadeIn items-col">
+            <h3>Not Sure What I Can Afford</h3>
+
+            <div class="seperator"></div>
+
+            <div id="option-b" class="animated">
+              <h4>Find out how much you can afford on a car based on how much you earn.</h4>
+              <div>
+                <a class="option-button" id="option-2">
+                  Search By Price
+                  <fa name="search"></fa>
+                </a>
+              </div>
+            </div>
+
+            <div id="option-b-form" class="animated">
+              <div id="affordabilitySearch">
+
+                <div id="cancel-b">
+                  <a id="">Cancel
+                    <fa name="close"></fa>
+                  </a>
+                </div>
+
+                <app-affordability-search></app-affordability-search>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 animated fadeIn items-col">
+            <h3>Find A Car That Suits Your Needs</h3>
+            <div class="seperator"></div>
+            <h4>Ask Carloyi for cars that best suit your needs and wants.</h4>
+            <div>
+              <app-suitability-search></app-suitability-search>
+            </div>
+          </div>
+
+          <div class="col-lg-12 how-to">
+            <h2>Easy steps</h2>
+          </div>
+
+
+          <div class="col-lg-3 how">
+
+            <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_1.png'"></div>
+            <div class="">
+              <img class="img-fluid image_120" src="../../assets/images/Step_1.png" />
+            </div>
+
+            <p>
+              <a class="badge badge-info">1</a>
+              Search for the perfect car based on your specific needs and wants and compare live.</p>
+          </div>
+
+          <div class="col-lg-3 how">
+
+            <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_2.png'"></div>
+            <img class="img-fluid image_120" src="../../assets/images/Step_2.png" />
+            <p>
+              <a class="badge badge-info">2</a>
+              Choose from discounted offers on new and demo vehicles from a network of dealerships.</p>
+          </div>
+
+          <div class="col-lg-3 how">
+
+            <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_3.png'"></div>
+            <img class="img-fluid image_120" src="../../assets/images/Step_3.png" />
+            <p>
+              <a class="badge badge-info">3</a>
+              Chat with a friendly salesperson and make your final arrangements.</p>
+          </div>
+
+          <div class="col-lg-3 how">
+            <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_4.png'"></div>
+            <img class="img-fluid image_120" src="../../assets/images/Step_4.png" />
+            <p>
+              <a class="badge badge-info">4</a>
+              Take delivery of your new car at your most convenient location.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="whyHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Why Carloyi?</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+<section class="how-to">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <h2>Carloyi Guide</h2>
+      </div>
+      <div class="col-lg-3 how">
+        <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_1.png'"></div>
+        <img class="img-fluid image_120" src="../../assets/images/Step_1.png" />
+        <p>Search for the perfect car based on your specific needs and wants and compare live.</p>
+      </div>
+
+      <div class="col-lg-3 how">
+        <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_2.png'"></div>
+        <img class="img-fluid image_120" src="../../assets/images/Step_2.png" />
+        <p>Choose from discounted offers on new and demo vehicles from a network of dealerships.</p>
+      </div>
+
+      <div class="col-lg-3 how">
+        <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_3.png'"></div>
+        <img class="img-fluid image_120" src="../../assets/images/Step_3.png" />
+        <p>Chat with a friendly salesperson and make your final arrangements.</p>
+      </div>
+
+      <div class="col-lg-3 how">
+        <div class="my-icon img-fluid" aria-label="My icon" [inlineSVG]="'../../assets/images/Step_4.png'"></div>
+        <img class="img-fluid image_120" src="../../assets/images/Step_4.png" />
+        <p>Take delivery of your new car at your most convenient location.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+-->
+
+<section class="whyContent">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+
+          <div class="card-body">
+            <h2>Carloyi.com…</h2>
+            <p>We put ourselves in your shoes to deliver easy to understand, practical judgements on all the cars on
+              the market.
+              Focusing on only the things you care about when purchasing a car.</p>
+            <div class="grid__item" style="background: whitesmoke; display: block;">
+              <div class="tooltip tooltip--dori" data-type="dori">
+                <div class="tooltip__trigger" role="tooltip" aria-describedby="info-dori">
+                  <span class="tooltip__trigger-text" style="color:aqua;">Dori</span>
+                </div>
+                <div class="tooltip__base">
+                  <svg class="tooltip__shape" width="100%" height="100%" viewBox="0 0 400 300">
+                    <path d="M 22,108 22,236 C 22,236 64,216 103,212 142,208 184,212 184,212 L 200,229 216,212 C 216,212 258,207 297,212 336,217 378,236 378,236 L 378,108 C 378,108 318,83.7 200,83.7 82,83.7 22,108 22,108 Z" />
+                  </svg>
+                  <div class="tooltip__content" id="info-dori">If you judge people, you have no time to love them.</div>
+                </div>
+              </div>
+            </div>
+            <p>We spend hundreds of hours a month evaluating and comparing countless new cars, while our experts spent
+              their
+              time ensuring the Carloyi paints the most accurate picture possible of the new vehicle market.
+              <br>
+              <br>
+            </p>
+            <div>
+              <a class="text_link" [routerLink]="['about']">More About Us</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="card">
+
+          <div class="card-body">
+            <h2>New cars</h2>
+            <p>There are over 1500 new cars available on sale in South Africa from over 50 brands. Very few people, if
+              any have
+              the time to visit all these companies to assess which is the best vehicle for them. This results in the
+              consumer
+              buying a car based very little information.</p>
+
+            <p>With Carloyi, all new vehicles are evaluated on their ability to satisfy the consumer’s needs and wants
+              and thus
+              a live comparison test is run for the whole market everytime you search for your car.</p>
+            <div>
+              <a class="text_link" (click)="suitable.suitabilitySearch()">Search for your new car</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-12">
+        <div class="card" style="margin-top: 2rem">
+
+          <div class="card-body">
+            <h2>One-stop, convenience dealership</h2>
+            <p>Finally we have put the entire car buying process on the web for your convenience so that you never need
+              to turn
+              anywhere else – saving you time and energy and putting you in the driving seat.</p>
+
+            <a class="text_link" [routerLink]="['register']">Create an account.</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

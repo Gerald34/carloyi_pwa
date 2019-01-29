@@ -1,0 +1,25 @@
+<div class="form-group">
+  <input #salary
+        type="text"
+        class="form-control"
+        id="salary"
+        aria-describedby="emailHelp"
+        placeholder="Monthly Salary"
+        autofocus>
+</div>
+
+<div class="form-group">
+  <input #expenses
+         type="text"
+         class="form-control"
+         id="expenses"
+         placeholder="Monthly Expenses">
+</div>
+
+<div>
+  <a (click)="searchByAffordability(salary, expenses)"
+     class="option-button-active" >
+        Search Car
+        <fa name="search"></fa>
+  </a>
+</div>

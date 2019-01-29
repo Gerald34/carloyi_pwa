@@ -1,0 +1,127 @@
+<div class="">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="wishlistHeader">
+        <h1 class="">All offers from dealers.</h1>
+      </div>
+    </div>
+
+    <div class="col-lg-12" *ngIf="errorMessages; else showOffers">
+      <div class="offersMassage wishlistHeader">
+        <h1>{{ errorMessages.errorMessage }}</h1>
+      </div>
+    </div>
+
+    <ng-template #showOffers>
+
+      <div class="col-lg-4 move" *ngFor="let dealerOffer of offerEntries">
+
+        <div class="card">
+
+          <div [id]="dealerOffer.id" class="idPicker">
+            <img class="img-fluid" [src]="(imagepath + dealerOffer.car_image)"/>
+
+            <div class="card-body car_info">
+              <h4>{{ dealerOffer.name }}</h4>
+              <div class="seperator"></div>
+              <h5>Dealer Offer | <span>{{ dealerOffer.offer | currency:'ZAR':"symbol-narrow" }}</span></h5>
+              <h5>Dealer Message : {{ dealerOffer.comment }}</h5>
+              <h5>Dealer Location : {{ dealerOffer.dealer_location }}</h5>
+              <input #itemID type="hidden" [value]="dealerOffer.id">
+              <input type="hidden" #uid [value]="userDataInfo.id">
+              <br>
+
+
+              <div *ngIf="dealerOffer.status === 'pending'; else bookTest">
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <a class="btn interested"
+                       (click)="interested(itemID.value)">
+                      <fa name="telegram"></fa>
+                      I'm Interested</a>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <a class="btn reject"
+                       (click)="rejectOffer(itemID.value)">
+                      <fa name="telegram"></fa>
+                      Reject Offer</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <ng-template #bookTest>
+
+                <button (click)="getOfferInformation(itemID.value)"
+                        class="btn bookingBtn"
+                        data-toggle="modal"
+                        data-target=".bookTestDrive">
+                  Book A Test Drive Now
+                </button>
+
+              </ng-template>
+
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </ng-template>
+  </div>
+</div>
+
+<!--
+<div id="BookingOverlay" class="bookingContainer animated fadeIn">
+
+                  <div class="bookingInner">
+                    <h3>Book Your Test Drive</h3>
+                    <form #bookTestDrive id="booking">
+
+                      <h6>Choose date and time</h6>
+
+                      <form>
+
+                        <div class="form-group col-lg-12">
+                          <div class="input-group">
+
+                            <input class="form-control"
+                                   placeholder="yyyy-mm-dd"
+                                   name="dp" [(ngModel)]="model" #date
+                                   ngbDatepicker #d="ngbDatepicker">
+
+                            <div class="input-group-append">
+                              <button
+                                class="btn"
+                                (click)="d.toggle()"
+                                type="button">
+                                [[]]
+                              </button>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                          <button class="btn" [ngxTimepicker]="time">Set Time</button>
+                          <ngx-material-timepicker #time></ngx-material-timepicker>
+                        </div>
+
+                        <div class="form-group col-lg-12">
+                          <a (click)="sendBooking(itemID.value, date, time)">Confirm Booking</a>
+                        </div>
+
+                      </form>
+
+                    </form>
+                  </div>
+
+                </div>
+-->
+
+

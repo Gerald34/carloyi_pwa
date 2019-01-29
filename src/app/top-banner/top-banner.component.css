@@ -1,0 +1,206 @@
+#help {
+  cursor: pointer;
+}
+
+@media (min-width: 200px) {
+  #app-background {
+    background-image: url('../../assets/images/black_car.jpg');
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 50% auto 0;
+    padding: 0 20px 0 20px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .smartest h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: center;
+  }
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+  }
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 576px) {
+  #app-background {
+    background-image: url('../../assets/images/black_car.jpg');
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 20% auto 0;
+    padding: 0 20px 0 20px;
+  }
+  .smartest h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: center;
+  }
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+  }
+  .help {
+    background: #f9a45e;
+    padding: 15px 20px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  #app-background {
+    background-image: url('../../assets/images/black_car.jpg');
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 45% auto 0;
+    padding: 0 20px 0 20px;
+  }
+  .smartest h1 {
+    font-size: 65px;
+    font-weight: 400;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: center;
+  }
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 35px;
+  }
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #app-background {
+    background-image: url('../../assets/images/black_car.jpg');
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  .smartest {
+    width: 713px;
+    right: 20px;
+    position: absolute;
+    z-index: 10;
+    margin: 34% auto 0;
+  }
+  .smartest h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: left;
+  }
+  .smartest p {
+    color: #f8f8f8;
+    text-align: left;
+    font-size: 22px;
+  }
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1110px) {
+  .smartest {
+    width: 60%;
+    right: 20px;
+    position: absolute;
+    z-index: 10;
+    margin: 28% auto 0;
+  }
+  .smartest h1 {
+    font-size: 60px;
+    font-weight: 600;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: left;
+  }
+  .smartest p {
+    color: #f8f8f8;
+    text-align: left;
+    font-size: 22px;
+  }
+  .help {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+    margin-left: 0;
+  }
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+}

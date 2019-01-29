@@ -1,0 +1,82 @@
+
+<div class='theMail'>
+
+  <div class='carloyi'>
+    <a href='https://www.carloyi.com'>
+      <img src='https://www.carloyi.com/assets/images/carnet_logo_white_1.png'/>
+    </a>
+  </div>
+
+  <h1 class='helloMsg'>Hi {{ userDataInfo.name }} {{ userDataInfo.lastName }},<br>
+    <small>Thanks for the {{ carInformation.name }} offer request.</small></h1>
+
+  <div class="requestBody">
+
+    <div class="col-60">
+      <div class="requestedCar">
+        <img class="img-fluid" [src]="(imagepath + carInformation.car_image)" />
+      </div>
+    </div>
+
+    <div class="col-40">
+      <div class='mailcontent'>
+        <h3 class='mailHeader'>Requested Vehicle Information</h3>
+        <p><span class="theBold">Car Name:</span> {{ carInformation.name }}</p>
+        <p><span class="theBold">Retail Price:</span> {{ carInformation.price }}</p>
+        <p><span class="theBold">Vehicle Type:</span> {{ carInformation.car_type }}</p>
+        <p><span class="theBold">Vehicle Bio:</span> {{ carInformation.verdict }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mailFooter">
+    <h2>Dealers will respond with offers as soon as possible...</h2>
+  </div>
+
+</div>
+
+<div class='theMail'>
+
+  <div class='carloyi'>
+    <a href='https://www.carloyi.com'>
+      <img src='https://www.carloyi.com/assets/images/carnet_logo_white_1.png'/>
+    </a>
+  </div>
+
+  <h1 class='helloMsg'>Hi {{ userDataInfo.name }} {{ userDataInfo.lastName }},<br>
+    <small>New Request for {{ carInformation.name }}.</small></h1>
+
+  <div class="requestBody">
+
+    <div class="col-30">
+      <div class="requestedCar">
+        <img class="img-fluid" [src]="(imagepath + carInformation.car_image)" />
+      </div>
+    </div>
+
+    <div class="col-30">
+      <div class='mailcontent'>
+        <h3 class='mailHeader'>Requested Vehicle Information</h3>
+        <p><span class="theBold">Car Name:</span> {{ carInformation.name }}</p>
+        <p><span class="theBold">Retail Price:</span>R {{ carInformation.price }}.00</p>
+        <p><span class="theBold">Vehicle Type:</span> {{ carInformation.car_type }}</p>
+      </div>
+    </div>
+
+    <div class="col-30">
+      <div class='mailcontent'>
+        <h3 class='mailHeader'>User Information</h3>
+        <p><span class="theBold">Name:</span> {{ userDataInfo.name }}</p>
+        <p><span class="theBold">last Name:</span> {{ userDataInfo.lastName }}</p>
+        <p><span class="theBold">Email Address:</span> {{ userDataInfo.email }}</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mailFooter">
+    <h2>Dealers will respond with offers as soon as possible...</h2>
+  </div>
+
+</div>

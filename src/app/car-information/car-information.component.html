@@ -1,0 +1,95 @@
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Vehicle Information</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                <img class="img-fluid" [imageZoom]="(imagepath + car_image)" [clickToZoom]="true" [scrollZoom]="true" [lensWidth]="450"
+                     [windowPosition]="6" [src]="(imagepath + car_image)" />
+
+                <h4>| {{ name }}</h4>
+                <p>{{ verdict }}</p>
+              </div>
+
+              <div class="col-lg-5">
+                <table class="table table-hover table-sm table-bordered">
+                  <tbody>
+                  <tr>
+                    <th scope="row">Vehicle Type</th>
+                    <td>{{ car_type }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Seats</th>
+                    <td>{{ carrying_people }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Engine</th>
+                    <td>{{ engine_type }}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Fuel Consumption</th>
+                    <td>{{ consumption_l_100km }}
+                      <span class="italic">l/100km</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Power</th>
+                    <td>{{ power_kw }} KW</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Torque</th>
+                    <td>{{ torque_nm }} NM</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Acceleration</th>
+                    <td>{{ acceleration_0_100 }}
+                      <span class="secs"> s 0 - 100km</span>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+
+                <h4>Retail Price |
+                  <span>{{ price | currency:'ZAR':"symbol-narrow" }}</span>
+                </h4>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+
+          <div *ngIf="affordability.loggedIn; else userLogin">
+
+            <span *ngIf="affordability.showroom">
+<button style="background: #f9a45e !important;" type="button" class="btn loginBtn animated fadeIn" (click)="affordability.moveToShowroom()">View Showroom</button>
+            </span>
+
+            <button type="button" class="btn loginBtn animated fadeIn" (click)="affordability.getSuggestionID(id)">
+              Save to your showroom
+              <fa name="sign-in"></fa>
+            </button>
+
+          </div>
+
+          <ng-template #userLogin>
+            <button type="button" class="btn loginBtn" data-toggle="modal" data-target=".login">
+              Get Deals From Dealerships
+              <fa name="sign-in"></fa>
+            </button>
+          </ng-template>
+
+        </div>
+
+      </div>
+    </div>

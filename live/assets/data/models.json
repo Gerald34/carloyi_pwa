@@ -1,0 +1,26 @@
+
+{
+  "successCode": 200,
+  "allModels" :[
+    {
+      "model": "116i",
+      "id": 1
+    },
+    {
+      "name": "118i",
+      "id": 2
+    },
+    {
+      "name": "120i",
+      "id": 3
+    },
+    {
+      "name": "135i M Sport",
+      "id": 4
+    },
+    {
+      "name": "145 M Sport",
+      "id": 5
+    }
+  ]
+}

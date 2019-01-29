@@ -1,0 +1,14 @@
+
+
+<section [id]="activeChatID" class="feed" *ngIf="activeChatID; else noActiveChat">
+  <app-message-feed [feed]="feed"></app-message-feed>
+  <app-chat-form [chatID]="activeChatID"></app-chat-form>
+</section>
+
+<ng-template #noActiveChat>
+  <div class="noChat">
+    <h1>Open Chat</h1>
+  </div>
+</ng-template>
+
+

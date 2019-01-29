@@ -1,0 +1,41 @@
+.contactheader {
+    width: 100%;
+    background: #006885;
+    padding: 1.3rem 0;
+    margin: 3.3rem 0 0 0;
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.3);
+}
+
+.contactInfo {
+    margin: 2rem auto 2rem;
+}
+
+.contactheader h1 {
+    text-align: center;
+    color:whitesmoke;
+    font-size: 1.4rem;
+}
+
+.contactInfo h2 {
+    font-size: 1.3rem;
+    color: #999;
+    font-weight: 200;
+
+    width: 100%;
+    padding: 1rem 0 1rem;
+    margin: 1rem auto 2rem;
+
+}
+
+.contactInfo p {
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: #aaa;
+}
+
+.contactInfo a {
+    font-weight: 500;
+    color: #888;
+}

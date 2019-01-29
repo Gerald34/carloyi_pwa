@@ -1,0 +1,138 @@
+<div class="row justify-content-md-center">
+
+  <div class="col-lg-12" style="background: none; padding-top: 1rem;">
+    <div class="avatar_holder">
+      <div class="avatar"></div>
+    </div>
+  </div>
+
+  <div class="col-lg-12">
+    <div class="wishlistHeader">
+      <h1 class="">Your Carloyi Profile Information.</h1>
+    </div>
+  </div>
+
+  <div class="col-lg-6 align-self-center">
+
+    <form>
+
+      <div class="form-group">
+        <input [value]="userDataInfo.email" required disabled #email type="email" class="form-control"
+               id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We won't share your email with anyone else.</small>
+      </div>
+
+      <div class="form-group">
+        <input [value]="userDataInfo.name" disabled #firstName type="text" class="form-control" id="name"
+               placeholder="First Name">
+      </div>
+
+      <div class="form-group">
+        <input [value]="userDataInfo.lastName" disabled #lastName type="text" class="form-control" id="surname"
+               placeholder="Last Name">
+      </div>
+
+      <div class="form-group">
+        <input #contactNumber [value]="userDataInfo.contactNumber" type="text" class="form-control" id="contacts"
+               placeholder="Contact Number">
+      </div>
+
+
+      <div class="form-group">
+
+              <span *ngIf="nationalityObject === true; else noNationality">
+                <select (change)="onNationalityChange($event)" class="form-control">
+
+                  <option selected
+                          [value]="userDataInfo.nationality">
+                    {{ userDataInfo.nationality }}
+                  </option>
+
+                  <option
+                    *ngFor="let nation of nations"
+                    [value]="nation.name">
+                    {{ nation.name }}
+                  </option>
+
+                </select>
+              </span>
+
+        <ng-template #noNationality>
+
+          <select (change)="onNationalityChange($event)" class="form-control">
+
+            <option value="0" selected>Select Nationality</option>
+
+            <option
+              *ngFor="let nation of nations"
+              [value]="nation.name">
+              {{ nation.name }}
+            </option>
+
+          </select>
+
+        </ng-template>
+
+      </div>
+
+      <div class="form-group">
+        <span *ngIf="userDataInfo.gender !=='undefined'; else noGender">
+
+          <select (change)="onGenderChange($event)" class="form-control">
+             <option selected
+                     [value]="userDataInfo.gender">
+                    {{ userDataInfo.gender }}
+             </option>
+
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+             <option value="other">Other</option>
+          </select>
+
+        </span>
+
+        <ng-template #noGender>
+
+          <select #gender class="form-control">
+            <option value="0" selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+        </ng-template>
+
+      </div>
+
+      <div class="form-group form-check">
+
+        <input (change)="toggleEditable($event)"
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+          name="agreement"
+          required>
+        <label class="form-check-label"
+               for="exampleCheck1">
+          I accept <a [routerLink]="['about']">
+          terms of use
+        </a>
+        </label>
+
+      </div>
+
+      <input type="hidden" [value]="userDataInfo.id" #userID>
+
+      <button (click)="getUpdateData(
+              email,
+              firstName,
+              lastName,
+              contactNumber,
+              userID)"
+        class="updateBTN">
+        Update My Profile
+      </button>
+    </form>
+
+  </div>
+</div>

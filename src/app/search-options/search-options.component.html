@@ -1,0 +1,59 @@
+<div class="row align-items-start">
+
+  <div class="options">
+    <div class="row">
+
+      <div class="col-lg-4 down items-col">
+        <div class="cols">
+          <h3 class="">I Know What I'm Looking For</h3>
+          <app-select-car></app-select-car>
+        </div>
+      </div>
+
+      <div class="col-lg-4 items-col">
+        <div class="cols">
+          <h3>Not Sure What I Can Afford</h3>
+
+          <div class="seperator"></div>
+
+          <div id="option-b" class="animated">
+            <h4 style="font-weight: 400;">Find out how much you can afford on a car based on how much you earn.</h4>
+            <div>
+              <a class="option-button" id="option-2">
+                Search By Price
+                <fa name="search"></fa>
+              </a>
+            </div>
+          </div>
+
+          <div id="option-b-form" class="animated">
+            <div id="affordabilitySearch">
+
+              <div id="cancel-b">
+                <a id="">Cancel
+                  <fa name="close"></fa>
+                </a>
+              </div>
+
+              <app-affordability-search></app-affordability-search>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 items-col">
+        <div class="cols">
+          <h3>Find A Car That Suits Your Needs</h3>
+          <div class="seperator"></div>
+          <h4 style="font-weight: 400;">Ask Carloyi for cars that best suit your needs and wants.</h4>
+          <div>
+            <app-suitability-search></app-suitability-search>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

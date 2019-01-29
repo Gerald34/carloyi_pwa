@@ -1,0 +1,17 @@
+<div class="cars" style="margin: 5rem auto;">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-3 animated zoomIn" data-t-show="1" *ngFor="let each_car of allCars">
+            <div id="car">
+                <div [id]="each_car.id" class="card" (click)="getElementID(each_car.id)">
+                    <img class="img-fluid" [src]="(imagepath + each_car.car_image)" />
+                    <div class="card-body car_info">
+                      <h4>{{ each_car.name }} - image {{ each_car.car_image }}</h4>
+                      <div class="seperator"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+.option-button-active {
+  width: 15rem;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: #f9a45e80;
+  border: 1px solid #f9a45ed7;
+  color: whitesmoke !important;
+  padding: .8rem 2.3rem;
+  margin: 1.6rem auto;
+  border-radius: 0px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.option-button-active:hover {
+  background: #f9a45ed7;
+  border: 1px solid #cf894fd7;
+}
+
+@media (min-width: 300px) {
+
+  .option-button,
+  .option-button-active {
+    color: #444 !important;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .option-button,
+  .option-button-active {
+    color: #eee !important;
+    font-weight: 500;
+  }
+
+  @media (min-width: 1100px) {
+
+    .option-button,
+    .option-button-active {
+      color: #eee !important;
+      font-weight: 500;
+    }
+  }
+
+}
