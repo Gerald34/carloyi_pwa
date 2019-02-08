@@ -5,11 +5,10 @@ import { HttpHeaders } from "@angular/common/http";
 export class ConstantsService {
   // Server URL's
   readonly api = "https://api.carloyi.com/index.php";
-  readonly nodeServer = "http://localhost:5000";
+  readonly nodeServer = "https://154.66.197.198:8080";
   readonly local = "http://localhost:8000";
   readonly imagePath = "https://carloyi.com/car_images/live/";
 
-  // Set HTTP Headers
   // Set HTTP Headers
   httpOptions = {
     headers: new HttpHeaders({
@@ -49,6 +48,11 @@ export class ConstantsService {
   readonly updatePassword = this.api + "/api/updatePassword";
   readonly reject = this.api + "/api/showroom/reject/";
   readonly getByType = this.api + "/api/carsearch/type";
+  readonly updateUserDetails = this.api + '/api/showroom/updateprofile';
+
+  // Node Server Related
+  readonly notificationSubscription = this.api + '/api/push_notifications/subscribe';
+  readonly requestNotification = this.api + '/api/push_notifications/request_push_message';
 
   constructor() {}
 }

@@ -68,7 +68,7 @@
 }
 
 .option-button {
-  width: 15rem;
+  width: 100%;
   display: block;
   text-align: center;
   font-size: 0.8rem;
@@ -78,7 +78,7 @@
   background: #f9a45e;
   border: 1px solid #f9a45ed7;
   color: #dfdfdf !important;
-  padding: .8rem 2.3rem;
+  padding: .8rem 1rem;
   margin: 1.6rem auto;
   border-radius: 2px;
   cursor: pointer;
@@ -182,7 +182,7 @@
   #more {
     display: block;
     padding: 1rem 1rem;
-    width: 80%;
+    width: 100%;
     font-size: 1rem;
     margin: 3rem auto 0;
     border: 1px solid whitesmoke;
@@ -297,7 +297,7 @@
 
   #searchByName,
   #affordabilitySearch {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
   }
 }

@@ -41,6 +41,11 @@ export class ShowroomCarsComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.login.userLoginSubject.subscribe((data: any) => {
+      this.userDataInfo = data.userData;
+    });
+
     const userID = this.userDataInfo.id;
     this.showroomInformation(userID);
   }
@@ -80,6 +85,11 @@ export class ShowroomCarsComponent implements OnInit {
     });
   }
 
+  /**
+   * Remove Car
+   * @param itemID
+   * @param uid
+   */
   public removeCar(itemID, uid) {
     swal({
       title: "Are you sure?",
@@ -92,7 +102,7 @@ export class ShowroomCarsComponent implements OnInit {
     }).then(result => {
       if (result.value) {
         this.apiMethods
-          .removeUserShowrromCar(itemID, uid)
+          .removeUserShowroomCar(itemID, uid)
           .subscribe((data: any) => {
             if (typeof data.successCode) {
               swal("Deleted!", "Your Car has been deleted.", "success");

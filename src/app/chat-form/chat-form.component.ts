@@ -45,7 +45,6 @@ export class ChatFormComponent implements OnInit {
 
   detectFiles(event) {
     const selectedFiles = event.target.files[0];
-    console.log(selectedFiles);
     this.uploadSingle(selectedFiles);
   }
 

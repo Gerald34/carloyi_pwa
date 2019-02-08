@@ -10,7 +10,7 @@
 
             <p>
               Username: {{ userDataInfo.username }} |
-<a class="logout" (click)="logout()">
+              <a class="logout" (click)="logout()">
                 Logout
               </a>
             </p>
@@ -34,25 +34,29 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
 
               <li class="nav-item">
-                <a id="budget-tab" data-toggle="tab" href="#home" class="icon icon-home active" role="tab" aria-controls="home" aria-selected="true">
+                <a (click)="highlightTab($event)"
+                   id="budget-tab" data-toggle="tab" href="#home" class="icon icon-home activeTab">
                   <span>Showroom</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a id="offers-tab" data-toggle="tab" href="#offers" class="icon icon-home" role="tab" aria-controls="offers" aria-selected="false">
+                <a (click)="highlightTab($event)"
+                   id="offers-tab" data-toggle="tab" href="#offers" class="icon icon-home">
                   <span>Offers</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a id="chats-tab" data-toggle="tab" href="#chats" class="icon icon-box" role="tab" aria-controls="chats" aria-selected="false">
+                <a (click)="highlightTab($event)"
+                   id="chats-tab" data-toggle="tab" href="#chats" class="icon icon-box">
                   <span>Chat Room</span>
                 </a>
               </li>
 
               <li class="nav-item">
-                <a id="profile-tab" data-toggle="tab" href="#my_profile" class="icon icon-box" role="tab" aria-controls="profile" aria-selected="false">
+                <a (click)="highlightTab($event)"
+                   id="profile-tab" data-toggle="tab" href="#my_profile" class="icon icon-box">
                   <span>My Profile</span>
                 </a>
               </li>
@@ -170,7 +174,8 @@
 -->
 <section>
   <!-- Modal Registration-->
-  <div class="modal fade profile" id="updateProfile" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal fade profile" id="updateProfile" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -187,98 +192,103 @@
                 <form>
 
                   <div class="form-group">
-                    <input [value]="userDataInfo.email" required disabled #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                      placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We won't share your email with anyone else.</small>
+                    <input [value]="userDataInfo.email" required disabled #email type="email" class="form-control"
+                           id="exampleInputEmail1" aria-describedby="emailHelp"
+                           placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We won't share your email with anyone else.
+                    </small>
                   </div>
 
                   <div class="form-group">
-                    <input [value]="userDataInfo.name" disabled #firstName type="text" class="form-control" id="name" placeholder="First Name">
+                    <input [value]="userDataInfo.name" disabled #firstName type="text" class="form-control" id="name"
+                           placeholder="First Name">
                   </div>
 
                   <div class="form-group">
-                    <input [value]="userDataInfo.lastName" disabled #lastName type="text" class="form-control" id="surname" placeholder="Last Name">
+                    <input [value]="userDataInfo.lastName" disabled #lastName type="text" class="form-control"
+                           id="surname" placeholder="Last Name">
                   </div>
 
                   <div class="form-group">
-                    <input #contactNumber [value]="userDataInfo.contactNumber" type="text" class="form-control" id="contacts" placeholder="Contact Number">
+                    <input #contactNumber [value]="userDataInfo.contactNumber" type="text" class="form-control"
+                           id="contacts" placeholder="Contact Number">
                   </div>
 
-      <div class="form-group">
+                  <div class="form-group">
 
-              <span *ngIf="nationalityObject === true; else noNationality">
-                <select (change)="onNationalityChange($event)" class="form-control">
+                    <span *ngIf="nationalityObject === true; else noNationality">
+                      <select (change)="onNationalityChange($event)" class="form-control">
 
-                  <option selected
-                          [value]="userDataInfo.nationality">
-                    {{ userDataInfo.nationality }}
-                  </option>
+                        <option selected
+                                [value]="userDataInfo.nationality">
+                          {{ userDataInfo.nationality }}
+                        </option>
 
-                  <option
-                    *ngFor="let nation of nations"
-                    [value]="nation.name">
-                    {{ nation.name }}
-                  </option>
+                        <option
+                          *ngFor="let nation of nations"
+                          [value]="nation.name">
+                          {{ nation.name }}
+                        </option>
 
-                </select>
-              </span>
+                      </select>
+                    </span>
 
-        <ng-template #noNationality>
+                    <ng-template #noNationality>
 
-          <select (change)="onNationalityChange($event)" class="form-control">
+                      <select (change)="onNationalityChange($event)" class="form-control invalidInput">
 
-            <option value="0" selected>Select Nationality</option>
+                        <option value="0" selected>Select Nationality</option>
 
-            <option
-              *ngFor="let nation of nations"
-              [value]="nation.name">
-              {{ nation.name }}
-            </option>
+                        <option
+                          *ngFor="let nation of nations"
+                          [value]="nation.name">
+                          {{ nation.name }}
+                        </option>
 
-          </select>
+                      </select>
 
-        </ng-template>
+                    </ng-template>
 
-      </div>
+                  </div>
 
-      <div class="form-group">
-        <span *ngIf="userDataInfo.gender !=='undefined'; else noGender">
+                  <div class="form-group">
+                    <span *ngIf="genderObject === true; else noGender">
 
-          <select (change)="onGenderChange($event)" class="form-control">
-             <option selected
-                     [value]="userDataInfo.gender">
-                    {{ userDataInfo.gender }}
-             </option>
+                      <select (change)="onGenderChange($event)" class="form-control">
+                         <option selected
+                                 [value]="userDataInfo.gender">
+                                {{ userDataInfo.gender }}
+                         </option>
 
-             <option value="male">Male</option>
-             <option value="female">Female</option>
-             <option value="other">Other</option>
-          </select>
+                         <option value="male">Male</option>
+                         <option value="female">Female</option>
+                         <option value="other">Other</option>
+                      </select>
 
-        </span>
+                    </span>
 
-        <ng-template #noGender>
+                    <ng-template #noGender>
 
-          <select #gender class="form-control">
-            <option value="0" selected>Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
+                      <select (change)="onGenderChange($event)"
+                              class="form-control invalidInput">
+                        <option value="0" selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                      </select>
 
-        </ng-template>
+                    </ng-template>
 
-      </div>
+                  </div>
 
                   <div class="form-group form-check">
 
                     <input (change)="toggleEditable($event)"
-                     type="checkbox"
-                     class="form-check-input"
-                     id="exampleCheck1"
-                     name="agreement"
-                     required
-                     #agreement>
+                           type="checkbox"
+                           class="form-check-input"
+                           id="exampleCheck1"
+                           name="agreement"
+                           required>
                     <label class="form-check-label" for="exampleCheck1">I accept
                       <a [routerLink]="['about']">terms of use</a>
                     </label>
@@ -290,8 +300,6 @@
             </div>
           </div>
 
-
-
         </div>
         <div class="modal-footer">
           <button (click)="getUpdateData(
@@ -299,7 +307,8 @@
               firstName,
               lastName,
               contactNumber,
-              userID)" class="updateBTN">
+              userID
+              )" class="updateBTN">
             Update My Profile
           </button>
 
@@ -317,7 +326,8 @@
 
 <section>
   <!-- Modal Registration-->
-  <div class="modal fade extras" id="register" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal fade extras" id="register" tabindex="10" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -336,15 +346,17 @@
                   <input type="hidden" #userID [value]="uid_1">
                   <input type="hidden" #userEmail [value]="user_email_1">
                   <div class="form-group col-lg-12">
-                    <textarea name="extras" type="text" class="form-control" placeholder="All the extras" ngModel #extras rows="6"></textarea>
-                    <small class="form-text text-muted-1">We endeavour to respond to all queries within 8 working hours.</small>
+                    <textarea name="extras" type="text" class="form-control" placeholder="All the extras" ngModel
+                              #extras rows="6"></textarea>
+                    <small class="form-text text-muted-1">We endeavour to respond to all queries within 8 working
+                      hours.
+                    </small>
                   </div>
 
                 </form>
               </div>
             </div>
           </div>
-
 
 
         </div>

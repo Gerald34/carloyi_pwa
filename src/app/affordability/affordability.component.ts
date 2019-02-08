@@ -189,13 +189,17 @@ export class AffordabilityComponent implements OnInit, OnDestroy {
       phone: phoneRegister.value
     };
 
-    return this.apiCall.register(registrationData).subscribe((data: any) => {
-      if (data.successCode === 209) {
-        /**
-         * Save to Firebase Realtime Database
-         */
-        this.authService.signUp(data.data.email, data.data.password, data.data.name)
-          .then(resolve => {
+    /**
+     * Save to Firebase Realtime Database
+     */
+    this.authService.signUp(
+      registrationData.email,
+      registrationData.password,
+      registrationData.name)
+      .then(resolve => {
+
+        return this.apiCall.register(registrationData).subscribe((data: any) => {
+          if (data.successCode === 209) {
 
             this.toastr.success('Registration Successful', 'Congratulations!');
             this.userDataInfo = data.data;
@@ -203,15 +207,17 @@ export class AffordabilityComponent implements OnInit, OnDestroy {
             this.storage.set('userInformation', data);
             this.loggedIn = true;
             $('.registration').modal('hide');
-            $('#login').modal('hide');
+            $('.login').modal('hide');
             this.login.watchLogin(data);
-          }).catch(error => {
-          this.errorMsg = error.message;
-          this.toastr.error(this.errorMsg, 'Error!');
-        });
-      } else {
-        swal('Sorry', data.errorMessage, 'error');
-      }
+
+          } else {
+            swal('Sorry', data.errorMessage, 'error');
+          }
+      });
+
+    }).catch(error => {
+      this.errorMsg = error.message;
+      this.toastr.error(this.errorMsg, 'Error!');
     });
   }
 

@@ -12,10 +12,9 @@ declare var $: any;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  userDataInfo: any = JSON.parse(this.storage.get('userDataInfo'));
-  // searchedCarResults = JSON.parse(this.storage.get('searchedCarResults'));
+  data: any = this.storage.get('userInformation');
+  userDataInfo: any;
   loggedin = false;
-  isResults: string;
   searchedCarResults: any;
   searchResults = false;
 
@@ -23,29 +22,30 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     @Inject(LOCAL_STORAGE) private storage: WebStorageService,
     public results: SearchService,
-    public login: LoginService
+    public login: LoginService,
   ) { }
 
   ngOnInit() {
 
-    $('#signUp a').on('click', function() {
-      $('.navbar-collapse').collapse('hide');
-    });
+    if (this.data !== null) {
+      if (typeof this.data.userData !== 'undefined' || typeof this.data.userData !== null) {
+        this.userDataInfo = this.data.userData;
+        this.results.resultsSubject
+          .subscribe((data: any) => {
+            this.searchResults = true;
+          });
 
-    // $(document).on('click', '.navbar-collapse.in', function(e) {
-    //   if ( $(e.target).is('a') ) {
-    //     $(this).collapse('hide');
-    //   }
-    // });
-
-    $('.navbar-nav > li > a').on('click', function() {
-      $('.navbar-collapse').collapse('hide');
-    });
-
-    this.results.resultsSubject
-      .subscribe((data: any) => {
-        this.searchResults = true;
-      });
+        if (this.userDataInfo === null) {
+          this.loggedin = false;
+        } else {
+          this.loggedin = true;
+        }
+      } else {
+        this.router.navigate(['']);
+      }
+    } else {
+      this.router.navigate(['']);
+    }
 
     this.login.userLoginSubject
       .subscribe((data: any) => {
@@ -55,12 +55,6 @@ export class HeaderComponent implements OnInit {
           this.loggedin = false;
         }
       });
-
-    if (this.userDataInfo === null) {
-      this.loggedin = false;
-    } else {
-      this.loggedin = true;
-    }
 
     const lastItems = $('.navbar-nav li .nav-item a');
     lastItems.slice(lastItems.length - 2).addClass('boldText');
@@ -77,6 +71,10 @@ export class HeaderComponent implements OnInit {
       });
     });
 
+  }
+
+  navbarCollapse() {
+    $('.navbar-collapse').collapse('hide');
   }
 
   // End of Header Component

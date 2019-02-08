@@ -1,3 +1,30 @@
+
+@media (min-width: 200px) {
+  .avatar_holder {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: white;
+    margin: 7rem auto 1rem;
+    border: 0 solid #999;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+  }
+}
+
+@media (min-width: 768px) {
+  .avatar_holder {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background-color: white;
+    margin: 0 auto 1rem;
+    border: 0 solid #999;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
+  }
+}
+
 .userInfoContainer {
     background-color: whitesmoke;
     margin-bottom: 2rem;
@@ -9,6 +36,10 @@
   .userHeader {
     padding-top: 1.5rem;
   }
+
+.invalidInput {
+  border: 1px solid red;
+}
   
   .userHeader h5 {
     text-align: left;
@@ -279,17 +310,6 @@
     cursor: pointer;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-  }
-  
-  .avatar_holder {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    background-color: white;
-    margin: 0 auto 1rem;
-    border: 0 solid #999;
-    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
-    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.5);
   }
   
   .avatar {

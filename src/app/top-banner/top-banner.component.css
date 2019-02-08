@@ -12,13 +12,71 @@
     left: 0;
     background-size: cover;
   }
+
+  .why {
+    font-size: 18px;
+    text-align: center;
+    color: #fefefe;
+  }
+
   .smartest {
     width: 100%;
     position: absolute;
     z-index: 10;
-    margin: 50% auto 0;
-    padding: 0 20px 0 20px;
-    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    margin: 0 auto 0;
+    padding: 200px 20px 20px 20px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .smartest h1 {
+    font-size: 40px;
+    font-weight: 400;
+    color: #f9a45e;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .help {
+    background: #f9a45e;
+    padding: 10px 40px;
+    width: 235px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 480px) {
+  #app-background {
+    background-image: url('../../assets/images/black_car.jpg');
+    width: 100%;
+    overflow-x: hidden;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    margin: 0 auto 0;
+    padding: 90px 20px 20px 20px;
+    background: rgba(0, 0, 0, 0.8);
   }
   .smartest h1 {
     font-size: 40px;
@@ -34,14 +92,15 @@
   }
   .help {
     background: #f9a45e;
-    padding: 15px 40px;
+    padding: 15px 20px;
     width: 300px;
     display: block;
+    margin: 0 auto;
   }
   #help {
     color: #f8f8f8;
     text-align: center;
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
@@ -59,8 +118,10 @@
     width: 100%;
     position: absolute;
     z-index: 10;
-    margin: 20% auto 0;
-    padding: 0 20px 0 20px;
+    height: 100%;
+    margin: 0 auto 0;
+    padding: 100px 20px 20px 20px;
+    background: rgba(0, 0, 0, 0.8);
   }
   .smartest h1 {
     font-size: 40px;
@@ -102,8 +163,8 @@
     width: 100%;
     position: absolute;
     z-index: 10;
-    margin: 45% auto 0;
-    padding: 0 20px 0 20px;
+    margin: 0 auto;
+    padding: 40% 20px 0 20px;
   }
   .smartest h1 {
     font-size: 65px;
@@ -141,10 +202,12 @@
   }
   .smartest {
     width: 713px;
+    height: auto;
     right: 20px;
     position: absolute;
     z-index: 10;
-    margin: 34% auto 0;
+    margin: 30% auto 0 auto;
+    padding: 20px 20px 20px 20px;
   }
   .smartest h1 {
     font-size: 60px;
@@ -178,6 +241,7 @@
     position: absolute;
     z-index: 10;
     margin: 28% auto 0;
+    padding: 20px;
   }
   .smartest h1 {
     font-size: 60px;

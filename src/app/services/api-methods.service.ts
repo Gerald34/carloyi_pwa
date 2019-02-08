@@ -7,6 +7,10 @@ import { ConstantsService } from "./constants.service";
 export class ApiMethodsService {
   constructor(private http: HttpClient, private constant: ConstantsService) {}
 
+  /**
+   * Save into showroom
+   * @param userUID_CID
+   */
   public saveCarsIntoShowroom(userUID_CID) {
     return this.http.post(
       this.constant.addCar,
@@ -15,6 +19,10 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * Post subscription
+   * @param subscription
+   */
   public postSubscription(subscription) {
     return this.http.post(
       this.constant.nodeServer,
@@ -23,6 +31,10 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * New user registration
+   * @param data
+   */
   public register(data) {
     return this.http.post(
       this.constant.register,
@@ -31,33 +43,48 @@ export class ApiMethodsService {
     );
   }
 
-  public sendInterest(itemID) {
-    return this.http.get(
-      this.constant.interested + itemID,
-      this.constant.httpOptions
-    );
-  }
-
+  /**
+   * Get car information
+   * @param id
+   */
   public getFullCarInformation(id: string) {
     return this.http.get(this.constant.getCarInformation + id);
   }
 
+  /**
+   * Get Makes
+   */
   public getMakes() {
     return this.http.get(this.constant.getMakes);
   }
 
+  /**
+   * Get brand models
+   * @param id
+   */
   public getBrandModels(id) {
     return this.http.get(this.constant.getBrandModels + id);
   }
 
+  /**
+   * Get model by id
+   * @param data
+   */
   public findModelByID(data) {
     return this.http.get(this.constant.findModelByID + data);
   }
 
+  /**
+   * Suitability search
+   */
   public suitabilitySearch() {
     return this.http.get(this.constant.suitabilitySearch);
   }
 
+  /**
+   * Search by affordability
+   * @param data
+   */
   public affordability(data) {
     return this.http.post(
       this.constant.searchByAffordability,
@@ -66,6 +93,10 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * Subscribe to newsletters
+   * @param data
+   */
   public newsletter(data) {
     return this.http.post(
       this.constant.newsletter,
@@ -74,6 +105,11 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * User signin
+   * @param email
+   * @param password
+   */
   public login(email: string, password: string) {
     return this.http.post(
       this.constant.login,
@@ -82,22 +118,33 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * Get offer details
+   * @param itemID
+   */
   public offerDetails(itemID) {
     return this.http.get(this.constant.getOfferInformation + itemID);
   }
 
+  /**
+   * Book a test drive
+   * @param booking
+   */
   public bookTestDrive(booking) {
-    return this.http.post(
-      this.constant.bookTestDrive,
-      booking,
-      this.constant.httpOptions
-    );
+    return this.http.post(this.constant.bookTestDrive, booking, this.constant.httpOptions);
   }
 
+  /**
+   * Send booking notification
+   * @param dealerID
+   */
   public bookingNotification(dealerID) {
     return this.http.get(this.constant.BookingNotification + dealerID);
   }
 
+  /**
+   * Fetch 2 random cars
+   */
   public randomCars() {
     const id_1 = Math.floor(Math.random() * (3948 - 1990)) + 1990;
     const id_2 = Math.floor(Math.random() * (3948 - 1990)) + 1990;
@@ -108,6 +155,9 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * Fetch 4 random cars
+   */
   public fourRandomCars() {
     const id_1 = Math.floor(Math.random() * (3948 - 1990)) + 1990;
     const id_2 = Math.floor(Math.random() * (3948 - 1990)) + 1990;
@@ -125,30 +175,10 @@ export class ApiMethodsService {
     );
   }
 
-  public getDealerName(dealerID) {
-    return this.http.get(this.constant.dealerName + dealerID);
-  }
-
-  public getUserCars(userInformation) {
-    return this.http.get(this.constant.getShowroomCars + userInformation.uid);
-  }
-
-  public placeRequest(requestData) {
-    return this.http.post(
-      this.constant.placeRequest,
-      requestData,
-      this.constant.httpOptions
-    );
-  }
-
-  public removeUserShowrromCar(itemID, uid) {
-    return this.http.post(
-      this.constant.removeUserCar,
-      { itemID: itemID, uid: uid },
-      this.constant.httpOptions
-    );
-  }
-
+  /**
+   * Create new password token
+   * @param email
+   */
   public createPasswordNewToken(email) {
     return this.http.post(
       this.constant.newPassordToken,
@@ -157,6 +187,11 @@ export class ApiMethodsService {
     );
   }
 
+  /**
+   * Update password
+   * @param newPassword
+   * @param passwordToken
+   */
   public updatePassword(newPassword, passwordToken) {
     return this.http.post(
       this.constant.updatePassword,
@@ -165,10 +200,11 @@ export class ApiMethodsService {
     );
   }
 
-  public rejectOffer(itemID) {
-    return this.http.get(this.constant.reject + itemID);
-  }
-
+  /**
+   * Filer by car type
+   * @param carType
+   * @param maxPrice
+   */
   public getFilterByType(carType: any, maxPrice: string) {
     return this.http.post(
       this.constant.getByType,
@@ -176,4 +212,76 @@ export class ApiMethodsService {
       this.constant.httpOptions
     );
   }
+
+  /**
+   * For User Showroom
+   * All HTTP Requests
+   */
+
+  /**
+   * Reject Offer
+   * @param itemID
+   */
+  public rejectOffer(itemID) {
+    return this.http.get(this.constant.reject + itemID);
+  }
+
+  /**
+   * Remove car
+   * @param itemID
+   * @param uid
+   */
+  public removeUserShowroomCar(itemID, uid) {
+    return this.http.post(
+      this.constant.removeUserCar,
+      { itemID: itemID, uid: uid },
+      this.constant.httpOptions
+    );
+  }
+
+  /**
+   * Get dealer information
+   * @param dealerID {number}
+   */
+  public getDealerName(dealerID: number) {
+    return this.http.get(this.constant.dealerName + dealerID);
+  }
+
+  /**
+   * Get user cars
+   * @param userInformation {object}
+   */
+  public getUserCars(userInformation: any) {
+    return this.http.get(this.constant.getShowroomCars + userInformation.uid);
+  }
+
+  /**
+   * Place offer request
+   * @param requestData {object}
+   */
+  public placeRequest(requestData: any) {
+    return this.http.post(this.constant.placeRequest, requestData, this.constant.httpOptions);
+  }
+
+  /**
+   * Offer interest
+   * @param itemID {int}
+   */
+  public sendInterest(itemID) {
+    return this.http.get(this.constant.interested + itemID, this.constant.httpOptions);
+  }
+
+  /**
+   * Update user profile information
+   * @param updateProfileData {object}
+   */
+  public updateUserInformation(updateProfileData) {
+    return this.http.post(this.constant.updateUserDetails, updateProfileData, this.constant.httpOptions);
+  }
+
+  public sendRequestNotification(offerData) {
+    return this.http.post(this.constant.requestNotification, offerData);
+  }
+
+
 }

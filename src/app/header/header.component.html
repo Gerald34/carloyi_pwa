@@ -19,42 +19,42 @@
 
     <ul class="navbar-nav ml-auto">
 
-      <li class="nav-item ">
+      <li (click)="navbarCollapse()" class="nav-item ">
         <a [routerLink]="['']" routerLinkActive="active" class="nav-link">Search</a>
       </li>
 
-      <li class="nav-item ">
+      <li (click)="navbarCollapse()" class="nav-item ">
         <a [routerLink]="['about']" routerLinkActive="active" class="nav-link">About</a>
       </li>
 
-      <li class="nav-item ">
+      <li (click)="navbarCollapse()" class="nav-item ">
         <a [routerLink]="['why']" routerLinkActive="active" class="nav-link">Why Carloyi</a>
       </li>
 
-      <li class="nav-item ">
+      <li (click)="navbarCollapse()" class="nav-item ">
         <a [routerLink]="['contact']" routerLinkActive="active" class="nav-link">Contact</a>
       </li>
 
-      <li class="nav-item animated fadeIn" *ngIf="searchResults">
+      <li (click)="navbarCollapse()" class="nav-item animated fadeIn" *ngIf="searchResults">
         <a [routerLink]="['results']" routerLinkActive="active" class="nav-link">
           Search Results
         </a>
       </li>
 
-      <li class="nav-item animated fadeIn" *ngIf="loggedin; else login">
+      <li (click)="navbarCollapse()" class="nav-item animated fadeIn collapseItem" *ngIf="loggedin; else login">
         <a [routerLink]="['showroom']" routerLinkActive="active" class="nav-link boldText">
           My Showroom
         </a>
       </li>
 
       <ng-template #login>
-        <li id="signUp" class="nav-item animated fadeIn">
+        <li (click)="navbarCollapse()" id="signUp" class="nav-item animated fadeIn collapseItem">
           <a [routerLink]="['register']" routerLinkActive="active" class="nav-link boldText">
             Sign Up
           </a>
         </li>
 
-        <li id="login" class="nav-item animated fadeIn">
+        <li (click)="navbarCollapse()" id="login" class="nav-item animated fadeIn collapseItem">
           <a [routerLink]="['signin']" routerLinkActive="active" class="nav-link boldText">
             Login
           </a>

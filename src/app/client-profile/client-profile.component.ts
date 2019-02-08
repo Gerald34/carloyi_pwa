@@ -11,6 +11,7 @@ import {
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ToastrService } from "ngx-toastr";
 import { LoginService } from "../services/login.service";
+import {ApiMethodsService} from '../services/api-methods.service';
 @Component({
   selector: "app-client-profile",
   templateUrl: "./client-profile.component.html",
@@ -34,40 +35,47 @@ export class ClientProfileComponent implements OnInit {
   nations: any;
   updateData: any;
   response: any;
-  nationality: string = this.userDataInfo.nationality;
   agreement: any;
-  gender: any = this.userDataInfo.gender;
-  nationalityObject: boolean;
+
+  nationality: string = this.userDataInfo.nationality;
+  gender: string = this.userDataInfo.gender;
+  nationalityObject = false;
+  genderObject = false;
 
   constructor(
     private http: HttpClient,
     private router: Router,
     @Inject(LOCAL_STORAGE) private storage: WebStorageService,
     private toastr: ToastrService,
-    private login: LoginService
+    private login: LoginService,
+    private apiMethods: ApiMethodsService
   ) {}
 
   ngOnInit() {
     this.getNationality();
-    if (this.nationality === null) {
+
+    if (this.nationality === null || this.nationality === '') {
       this.nationalityObject = false;
-      console.log("its null");
     } else {
       this.nationalityObject = true;
-      console.log("Not Null");
     }
+
+    if (this.gender === null || this.gender === '') {
+      this.genderObject = false;
+    } else {
+      this.genderObject = true;
+    }
+
+    // Update user information @realtime
     this.login.userLoginSubject.subscribe((data: any) => {
       this.userDataInfo = data.userData;
-
       if (this.userDataInfo.nationality === null) {
         this.nationalityObject = false;
-        console.log("its null");
       } else {
         this.nationalityObject = true;
-        console.log("Not Null");
       }
     });
-    // $('select[name="options"]').find('option[value="3"]').attr("selected",true);
+
   }
 
   onNationalityChange(event) {
@@ -103,10 +111,6 @@ export class ClientProfileComponent implements OnInit {
    * @param {string} firstName
    * @param {string} lastName
    * @param {string} contactNumber
-   * @param {string} nationality
-   * @param {string} identityNumber
-   * @param {string} gender
-   * @param {string} agreement
    * @param {string} userID
    * @returns {Subscription}
    */
@@ -144,27 +148,20 @@ export class ClientProfileComponent implements OnInit {
    * @private
    */
   private _updateProfile(updateProfileData: any) {
-    return this.http
-      .post(
-        this.apiDomain + "/api/showroom/updateprofile",
-        updateProfileData,
-        this.httpOptions
-      )
-      .subscribe((updateData: any) => {
-        if (typeof updateData.successCode !== "undefined") {
-          this.response = updateData.successMessage;
-          this.toastr.success(this.response, "Great!");
 
-          this.storage.set("userInformation", updateData);
-          this.data = this.storage.get("userInformation");
+    return this.apiMethods.updateUserInformation(updateProfileData).subscribe((data: any) => {
+      if (typeof data.successCode !== "undefined") {
 
-          console.log(this.data);
-          this.userDataInfo = updateData.userData;
-          // swal('Great!', this.response, 'success');
-        } else {
-          this.response = this.updateData.errorMessage;
-          swal("Sorry", this.response, "warning");
-        }
-      });
+        // Update current user data
+        this.userDataInfo = data.userData;
+        this.storage.set("userInformation", data);
+        this.login.watchLogin(data);
+        this.toastr.success(data.successMessage, "Great!");
+
+      } else {
+        this.response = this.updateData.errorMessage;
+        swal("Sorry", this.response, "warning");
+      }
+    });
   }
 }

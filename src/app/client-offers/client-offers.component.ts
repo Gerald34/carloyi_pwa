@@ -42,7 +42,8 @@ export class ClientOffersComponent implements OnInit {
   disabled = false;
 
   // All Local Storage Data
-  userDataInfo = JSON.parse(this.storage.get('userDataInfo'));
+  data = this.storage.get('userInformation');
+  userDataInfo = this.data.userData;
   searchedCarResults = JSON.parse(this.storage.get('searchedCarResults'));
 
   // All API related properties

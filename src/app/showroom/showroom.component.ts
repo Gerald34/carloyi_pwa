@@ -1,22 +1,23 @@
-import { Component, OnInit, Inject } from "@angular/core";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import swal from "sweetalert2";
-import { Router } from "@angular/router";
-import { LOCAL_STORAGE, WebStorageService } from "angular-webstorage-service";
-import { HeaderComponent } from "../header/header.component";
+import {Component, OnInit, Inject} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import swal from 'sweetalert2';
+import {Router} from '@angular/router';
+import {LOCAL_STORAGE, WebStorageService} from 'angular-webstorage-service';
+import {HeaderComponent} from '../header/header.component';
+
 declare var $: any;
-import { ClientProfileComponent } from "../client-profile/client-profile.component";
-import { SearchService } from "../services/search.service";
-import { LoginService } from "../services/login.service";
-import { ClientOffersComponent } from "../client-offers/client-offers.component";
-import { ToastrService } from "ngx-toastr";
+import {ClientProfileComponent} from '../client-profile/client-profile.component';
+import {SearchService} from '../services/search.service';
+import {LoginService} from '../services/login.service';
+import {ClientOffersComponent} from '../client-offers/client-offers.component';
+import {ToastrService} from 'ngx-toastr';
 // Services
-import { ApiMethodsService } from "../services/api-methods.service";
+import {ApiMethodsService} from '../services/api-methods.service';
 
 @Component({
-  selector: "app-showroom",
-  templateUrl: "./showroom.component.html",
-  styleUrls: ["./showroom.component.css"],
+  selector: 'app-showroom',
+  templateUrl: './showroom.component.html',
+  styleUrls: ['./showroom.component.css'],
   providers: [ClientOffersComponent]
 })
 
@@ -25,9 +26,9 @@ import { ApiMethodsService } from "../services/api-methods.service";
  */
 export class ShowroomComponent implements OnInit {
   // API Location
-  readonly apiDomain = "https://api.carloyi.com/index.php";
-  readonly local = "http://localhost:8000";
-  readonly imagepath = "https://carloyi.com/car_images/live/";
+  readonly apiDomain = 'https://api.carloyi.com/index.php';
+  readonly local = 'http://localhost:8000';
+  readonly imagepath = 'https://carloyi.com/car_images/live/';
 
   picker: string;
   date: string;
@@ -35,20 +36,20 @@ export class ShowroomComponent implements OnInit {
   // Set HTTP Headers
   readonly httpOptions = {
     headers: new HttpHeaders({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Credentials": "true"
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Credentials': 'true'
     })
   };
 
   // All Local Storage Data
-  dataInfo = this.storage.get("userInformation");
+  dataInfo = this.storage.get('userInformation');
   userData = this.dataInfo.userData;
-  auth = this.storage.get("auth");
+  auth = this.storage.get('auth');
   userDataInfo = this.userData;
-  searchedCarResults = JSON.parse(this.storage.get("searchedCarResults"));
+  searchedCarResults = JSON.parse(this.storage.get('searchedCarResults'));
 
   // All API related properties
   allUserCars: any;
@@ -79,12 +80,13 @@ export class ShowroomComponent implements OnInit {
   empty: boolean;
 
   agreement: any;
-  gender: any;
+  gender: string = this.userData.gender;
   response: any;
   data: any;
   updateData: any;
   nationality: string = this.userData.nationality;
-  nationalityObject: boolean;
+  nationalityObject = false;
+  genderObject = false;
 
   constructor(
     private http: HttpClient,
@@ -96,7 +98,8 @@ export class ShowroomComponent implements OnInit {
     public login: LoginService,
     public apiMethods: ApiMethodsService,
     private searchService: SearchService // public ClientOffers: ClientOffersComponent
-  ) {}
+  ) {
+  }
 
   /**
    *
@@ -108,22 +111,19 @@ export class ShowroomComponent implements OnInit {
       this.itemID = itemID;
     });
 
-    if (this.nationality === null) {
+    if (this.nationality === null || this.nationality === '') {
       this.nationalityObject = false;
     } else {
       this.nationalityObject = true;
     }
 
-    window.scrollTo(0, 0);
+    if (this.gender === null || this.gender === '') {
+      this.genderObject = false;
+    } else {
+      this.genderObject = true;
+    }
 
-    // this.login.userLoginSubject
-    //   .subscribe((data: any) => {
-    //     if (data.status === 'active') {
-    //       this.userDataInfo = data.data;
-    //     } else {
-    //       this.router.navigate(['signin']);
-    //     }
-    //   });
+    window.scrollTo(0, 0);
 
     this.name =
       this.userDataInfo.name[0].toUpperCase() +
@@ -138,6 +138,13 @@ export class ShowroomComponent implements OnInit {
     this.profileMethods = this.profile;
   }
 
+  highlightTab(event) {
+    const targetID = event.target.id;
+    console.log(targetID);
+    $('a.icon').removeClass('activeTab');
+    $('#' + targetID).addClass('activeTab');
+  }
+
   getOfferDetails(itemID) {
     this.apiMethods.offerDetails(itemID).subscribe((data: any) => {
       this.offerInformation = data;
@@ -149,14 +156,14 @@ export class ShowroomComponent implements OnInit {
    *
    */
   public logout() {
-    this.storage.remove("userInformation");
+    this.storage.remove('userInformation');
     this.userDataInfo = null;
     const logout = {
-      status: "inactive",
+      status: 'inactive',
       data: null
     };
     this.login.watchLogin(logout);
-    this.router.navigate(["signin"]);
+    this.router.navigate(['signin']);
   }
 
   /**
@@ -167,17 +174,17 @@ export class ShowroomComponent implements OnInit {
    */
   public suitabilitySearch() {
     return this.apiMethods.suitabilitySearch().subscribe((data: any) => {
-      this.searchService.setStorageItem("searchedCarResults", {
+      this.searchService.setStorageItem('searchedCarResults', {
         results: data,
-        type: "suitabilitySearch"
+        type: 'suitabilitySearch'
       });
-      this.storage.set("car_type", {
+      this.storage.set('car_type', {
         data: data,
-        type: "suitabilitySearch",
-        title: "Search cars"
+        type: 'suitabilitySearch',
+        title: 'Search cars'
       });
       this.searchService.storeSearchData(data);
-      this.router.navigate(["results"]);
+      this.router.navigate(['results']);
     });
   }
 
@@ -187,7 +194,7 @@ export class ShowroomComponent implements OnInit {
    */
   public getNationality() {
     return this.http
-      .get("https://restcountries.eu/rest/v2/all")
+      .get('https://restcountries.eu/rest/v2/all')
       .subscribe(nations => {
         this.nations = nations;
       });
@@ -211,7 +218,7 @@ export class ShowroomComponent implements OnInit {
    */
   public showroomCars(userInformation) {
     return this.http
-      .get(this.apiDomain + "/api/showroom/cars/" + userInformation.uid)
+      .get(this.apiDomain + '/api/showroom/cars/' + userInformation.uid)
       .subscribe((data: any) => {
         this.apiReturn = data;
         if (data.code === -1) {
@@ -221,11 +228,11 @@ export class ShowroomComponent implements OnInit {
           this.empty = false;
           this.allUserCars = data[0].data.cars.data;
           this.page = 1;
-          $(function() {
+          $(function () {
             if (data[0].code === 1) {
-              $(".footer").css("position", "relative");
+              $('.footer').css('position', 'relative');
             } else {
-              $(".footer").css("position", "absolute");
+              $('.footer').css('position', 'absolute');
             }
           });
         }
@@ -234,8 +241,10 @@ export class ShowroomComponent implements OnInit {
 
   /**
    * Send Request
-   * @param itemID
-   * @param uid
+   * @param requestID
+   * @param userID
+   * @param userEmail
+   * @param extras
    * @returns {Subscription}
    */
   public sendRequest(requestID: any, userID, userEmail, extras) {
@@ -247,34 +256,37 @@ export class ShowroomComponent implements OnInit {
     };
 
     if (this.userDataInfo.status === 1) {
-      return this.http
-        .post(
-          this.apiDomain + "/api/showroom/placerequest",
-          requestData,
-          this.httpOptions
-        )
-        .subscribe((requestReturn: any) => {
-          if (requestReturn.successCode === 200) {
-            swal("Great!!", "Request was successfully sent", "success");
-          } else if (requestReturn.code === -1) {
-            swal("Oops!", requestReturn.error, "info");
-          } else {
-            swal("Oops!", requestReturn.errorMessage, "info");
-          }
-        });
+      return this.apiMethods.placeRequest(requestData).subscribe((data: any) => {
+        console.log(data);
+        if (data.successCode === 200) {
+          swal('Great!!', 'Request was successfully sent', 'success');
+        } else if (data.code === -1) {
+          swal('Oops!', data.error, 'info');
+        } else {
+          swal('Oops!', data.errorMessage, 'info');
+        }
+      });
     } else {
       swal(
-        "Attention",
-        "Please provide us with important information before we proceed",
-        "info"
+        'Attention',
+        'Please provide us with important information before we proceed',
+        'info'
       );
     }
   }
 
+  /**
+   * Get Nationality Value
+   * @param event
+   */
   onNationalityChange(event) {
     this.nationality = event.target.value;
   }
 
+  /**
+   * Get Gender Value
+   * @param event
+   */
   onGenderChange(event) {
     this.gender = event.target.value;
   }
@@ -286,10 +298,6 @@ export class ShowroomComponent implements OnInit {
    * @param {string} firstName
    * @param {string} lastName
    * @param {string} contactNumber
-   * @param {string} nationality
-   * @param {string} identityNumber
-   * @param {string} gender
-   * @param {string} agreement
    * @param {string} userID
    * @returns {Subscription}
    */
@@ -312,10 +320,10 @@ export class ShowroomComponent implements OnInit {
       userID: this.userDataInfo.id
     };
 
-    if (this.agreement === "on") {
+    if (this.agreement === 'on') {
       return this._updateProfile(updateProfileData);
     } else {
-      swal("Notice!", "Please consent to the terms of use", "warning");
+      swal('Notice!', 'Please consent to the terms of use', 'warning');
     }
   }
 
@@ -327,37 +335,31 @@ export class ShowroomComponent implements OnInit {
    * @private
    */
   private _updateProfile(updateProfileData: any) {
-    return this.http
-      .post(
-        this.apiDomain + "/api/showroom/updateprofile",
-        updateProfileData,
-        this.httpOptions
-      )
-      .subscribe((updateData: any) => {
-        if (typeof updateData.successCode !== "undefined") {
-          this.response = updateData.successMessage;
-          this.toastr.success(this.response, "Great!");
 
-          this.storage.set("userInformation", updateData);
-          this.data = this.storage.get("userInformation");
+    return this.apiMethods.updateUserInformation(updateProfileData).subscribe((data: any) => {
+      if (typeof data.successCode !== 'undefined') {
 
-          this.userDataInfo = updateData.userData;
-          this.login.watchLogin(updateData);
-          // swal('Great!', this.response, 'success');
-        } else {
-          this.response = this.updateData.errorMessage;
-          swal("Sorry", this.response, "warning");
-        }
-      });
+        // Update current user data
+        this.userDataInfo = data.userData;
+        this.storage.set('userInformation', data);
+        $('.profile').modal('hide');
+        this.login.watchLogin(data);
+        this.toastr.success(data.successMessage, 'Great!');
+
+      } else {
+        this.response = this.updateData.errorMessage;
+        swal('Sorry', this.response, 'warning');
+      }
+    });
   }
 
   public goToProfile() {
-    (<any>$('.nav-tabs a[href="#my_profile"]')).tab("show");
+    (<any>$('.nav-tabs a[href="#my_profile"]')).tab('show');
   }
 
   toggleEditable(event) {
     if (event.target.checked) {
-      this.agreement = "on";
+      this.agreement = 'on';
     }
   }
 

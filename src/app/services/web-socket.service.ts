@@ -18,36 +18,49 @@ export class WebSocketService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
+      'Accept': 'application/json',
       'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'content-type'
     })
   };
+
   constructor(
     private push: SwPush,
     private constant: ConstantsService,
     private apiCall: ApiMethodsService,
-    private http: HttpClient,
-    private toastr: ToastrService
+    private http: HttpClient
     ) { }
 
-  public getNotifications(userUID) {
+  /**
+   * Get Notifications
+   * @param userID
+   */
+  public getNotifications(userID) {
+    const userIdentity = userID;
     this.push.requestSubscription({
         serverPublicKey: this.VAPID_PUBLIC_KEY
     }).then(subscription => {
       console.log(subscription);
-      this.sendSubscription(subscription, userUID).subscribe();
-      // this.toastr.success('Car successfully added to your showroom', 'Great!');
+      this.sendSubscription(subscription, userIdentity).subscribe((response: any) => {
+        console.log(response);
+      });
       }).catch(err => console.error('Could not subscribe to notifications', err));
   }
 
-  private sendSubscription(subscription, userUID) {
+  /**
+   * Send Subscription
+   * @param subscription
+   * @param userIdentity
+   */
+  private sendSubscription(subscription, userIdentity) {
 
+    // Subscription Payload
     const subscriptionData = {
       subscription: subscription,
-      userid: userUID.uid
+      userid: userIdentity
     };
 
-    return this.http
-      .post(this.constant.nodeServer + '/subscription', subscriptionData, this.httpOptions);
+    return this.http.post(this.constant.notificationSubscription, subscriptionData, this.httpOptions);
   }
 
 }

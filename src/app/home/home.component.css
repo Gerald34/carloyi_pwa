@@ -203,7 +203,17 @@ h4 {
     padding: 1rem 0 0.7rem 0;
     background-color: #006885;
     width: 100%;
+    text-align: center;
   }
+
+  .whyHeader h1 {
+    text-transform: none;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: whitesmoke;
+    text-align: center;
+  }
+
   .down {
     padding-top: 6rem !important;
   }
@@ -283,6 +293,7 @@ h4 {
     border-bottom: 2px solid #f1f1f1;
     margin-top: 2rem;
   }
+
   h1 {
     font-weight: 100;
     color: whitesmoke;
@@ -290,6 +301,7 @@ h4 {
     text-align: center;
     text-transform: uppercase;
   }
+
   h3 {
     color: #707070;
     font-weight: 400;

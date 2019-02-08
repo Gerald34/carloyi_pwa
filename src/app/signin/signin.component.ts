@@ -119,17 +119,16 @@ export class SigninComponent implements OnInit {
               .login(email, password)
               .subscribe((loginReturn: any) => {
                 if (loginReturn.successCode === 201) {
+
                   const loginInformation = {
                     status: "active",
                     data: loginReturn.userData
                   };
 
-                  this.wsService.getNotifications(loginReturn.userData.id);
+                  const userID = loginReturn.userData.id;
 
-                  this.storage.set(
-                    "userDataInfo",
-                    JSON.stringify(loginReturn.userData)
-                  );
+                  this.wsService.getNotifications(userID);
+
                   this.login.watchLogin(loginInformation);
                   const name =
                     loginReturn.userData.name[0].toUpperCase() +
