@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
 
   carID = JSON.parse(localStorage.getItem('cid'));
   randomCars: any;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = "https://images.carloyi.com/";
 
   /**
    * Constructor

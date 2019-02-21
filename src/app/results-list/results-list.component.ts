@@ -25,7 +25,7 @@ export class ResultsListComponent implements OnInit {
   searchedCarResults = JSON.parse(this.storage.get('searchedCarResults'));
   carsData = this.searchedCarResults.results.data;
   carType = this.searchedCarResults.car_type;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = 'https://images.carloyi.com/';
   carInformation: any;
   userInfo: any = JSON.parse(this.storage.get('userDataInfo'));
   showroom = false;

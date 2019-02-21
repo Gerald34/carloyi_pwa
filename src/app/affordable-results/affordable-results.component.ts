@@ -13,7 +13,7 @@ export class AffordableResultsComponent implements OnInit {
   searchedCarResults = JSON.parse(this.storage.get('searchedCarResults'));
   carsData = this.searchedCarResults.results.data;
   carType = this.searchedCarResults.car_type;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = "https://images.carloyi.com/";
 
   constructor(
     @Inject(LOCAL_STORAGE) private storage: WebStorageService,

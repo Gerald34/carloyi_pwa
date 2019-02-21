@@ -55,7 +55,7 @@ export class FilterSearchComponent implements OnInit {
   selectedCarType: boolean[] = [];
   filterType: any;
   checked: boolean;
-  imagepath = "https://carloyi.com/car_images/live/";
+  imagepath = "https://images.carloyi.com/";
   seachType = this.storage.get("car_type");
   searchedCarResults = JSON.parse(this.storage.get("searchedCarResults"));
 
@@ -71,12 +71,16 @@ export class FilterSearchComponent implements OnInit {
   getCarID: string;
 
   /**
-   * @param {HttpClient} http
-   * @param {Ng4LoadingSpinnerService} spinnerService
-   * @param {WebStorageService} storage
-   * @param {AffordabilityComponent} afford
-   * @param {LoadingBarService} loadingBar
-   * @param {Router} router
+   * Constructor
+   * @param http
+   * @param spinnerService
+   * @param storage
+   * @param afford
+   * @param loadingBar
+   * @param router
+   * @param utilService
+   * @param apiRequests
+   * @param toastr
    */
   constructor(
     private http: HttpClient,
@@ -385,3 +389,5 @@ export class FilterSearchComponent implements OnInit {
     location.reload();
   }
 }
+
+// fm 11 vw gp

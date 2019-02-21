@@ -7,7 +7,7 @@ export class ConstantsService {
   readonly api = "https://api.carloyi.com/index.php";
   readonly nodeServer = "https://154.66.197.198:8080";
   readonly local = "http://localhost:8000";
-  readonly imagePath = "https://carloyi.com/car_images/live/";
+  readonly imagePath = "https://images.carloyi.com/";
 
   // Set HTTP Headers
   httpOptions = {

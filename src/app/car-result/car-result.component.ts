@@ -13,7 +13,7 @@ import { AppComponent } from '../app.component';
 export class CarResultComponent implements OnInit {
 
   @Input() carResult: CarResult;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = "https://images.carloyi.com/";
   id: string;
   name: string;
   total_score: string;

@@ -10,7 +10,7 @@ import { FullCarInformation } from '../models/car-information.model';
 export class CarInformationComponent implements OnInit {
 
   @Input() getCarInfo: FullCarInformation;
-  readonly imagepath = 'https://carloyi.com/car_images/live/';
+  readonly imagepath = "https://images.carloyi.com/";
   id: string;
   name: string;
   total_score: string;

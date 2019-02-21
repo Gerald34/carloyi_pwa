@@ -28,7 +28,7 @@ export class ShowroomComponent implements OnInit {
   // API Location
   readonly apiDomain = 'https://api.carloyi.com/index.php';
   readonly local = 'http://localhost:8000';
-  readonly imagepath = 'https://carloyi.com/car_images/live/';
+  readonly imagepath = "https://images.carloyi.com/";
 
   picker: string;
   date: string;
@@ -88,6 +88,18 @@ export class ShowroomComponent implements OnInit {
   nationalityObject = false;
   genderObject = false;
 
+  /**
+   * Constructor
+   * @param http
+   * @param router
+   * @param storage
+   * @param toastr
+   * @param header
+   * @param profile
+   * @param login
+   * @param apiMethods
+   * @param searchService
+   */
   constructor(
     private http: HttpClient,
     private router: Router,

@@ -28,7 +28,7 @@ export class ClientOffersComponent implements OnInit {
   // API Location
   readonly apiDomain = 'https://api.carloyi.com/index.php';
   readonly local = 'http://localhost:8000';
-  readonly imagepath = 'https://carloyi.com/car_images/live/';
+  readonly imagepath = "https://images.carloyi.com/";
 
 
   // Set HTTP Headers

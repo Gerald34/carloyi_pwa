@@ -15,7 +15,7 @@ export class BookATestDriveComponent implements OnInit {
 
   @Input() offer;
   date: any;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = "https://images.carloyi.com/";
   setTime: any;
 
   constructor(

@@ -1,6 +1,11 @@
 <IfModule mod_rewrite.c>
     RewriteEngine on
 
+    # RewriteEngine On
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} !^www\.carloyi\.com$ [NC]
+    RewriteRule ^(.*)$ https://www.carloyi.com/$1 [L,R=301]
+
     # Don't rewrite files or directories
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
@@ -9,4 +14,9 @@
     # Rewrite everything else to index.html
     # to allow html5 state links
     RewriteRule ^ index.html [L]
+
+# RewriteEngine On
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP_HOST} !^www\.carloyi\.com$ [NC]
+# RewriteRule ^(.*)$ https://www.carloyi.com/$1 [L,R=301]
 </IfModule>

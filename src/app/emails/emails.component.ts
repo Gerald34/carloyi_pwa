@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class EmailsComponent implements OnInit {
 
   readonly local = 'http://localhost:8000';
-  readonly imagepath = 'https://carloyi.com/car_images/live/';
+  readonly imagepath = "https://images.carloyi.com/";
   // Set HTTP Headers
   readonly httpOptions = {
     headers: new HttpHeaders({

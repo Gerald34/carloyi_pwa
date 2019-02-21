@@ -32,7 +32,7 @@ export class LandingComponent implements OnInit, OnDestroy {
 
   loading = true;
   randomCars: any;
-  imagepath = 'https://carloyi.com/car_images/live/';
+  imagepath = "https://images.carloyi.com/";
 
   constructor(
     private http: HttpClient,
