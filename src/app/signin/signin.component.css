@@ -1,0 +1,386 @@
+/* Login Page */
+
+#theForm input,
+.form-control,
+#theRegistrationForm input {
+  background: none;
+  border: whitesmoke 1px solid;
+  text-align: left;
+  color: whitesmoke;
+}
+
+.formErrors {
+  color: whitesmoke;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-left: 0.7rem;
+}
+
+.loginBtn:disabled {
+  background: black;
+  opacity: .2;
+  cursor: not-allowed;
+}
+
+.loginForm a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.message {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+#thForm>button>.loginBtn>fa {
+  margin-left: 0;
+}
+
+.loginForm p {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+}
+
+@media (min-width: 300px) {
+
+  .form-check {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-left: 38px;
+  }
+
+  .form-check-label {
+    padding-left: 0 !important;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .loginBtn {
+    font-size: 1rem;
+    padding: 3rem auto;
+    width: 100%;
+  }
+
+  #app-background {
+    background: url('../../assets/images/bg_1.jpg');
+    width: 100%;
+    height: 100vh;
+    position: inherit;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .logo {
+    background-image: url('../../assets/images/carnet_logo_white.png');
+    width: 108px;
+    height: 32px;
+    margin-bottom: .4rem;
+    display: none;
+  }
+
+  .loginScreen {
+    margin: 6rem auto;
+  }
+
+  .loginForm {
+    overflow: hidden;
+    width: 100%;
+    color: whitesmoke;
+    padding: 1.7rem 2rem;
+  }
+
+  .loginForm h4 {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+}
+
+@media (min-width: 480px) {
+
+  .form-check {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-left: 38px;
+  }
+
+  .form-check-label {
+    padding-left: 0 !important;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .loginBtn {
+    font-size: 1rem;
+    padding: 3rem auto;
+    width: 100%;
+  }
+
+  #app-background {
+    background: url('../../assets/images/bg_1.jpg');
+    width: 100%;
+    height: 110vh;
+    position: inherit;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .logo {
+    background-image: url('../../assets/images/carnet_logo_white.png');
+    width: 108px;
+    height: 32px;
+    margin-bottom: .4rem;
+    display: none;
+  }
+
+  .loginScreen {
+    margin: 3rem auto;
+  }
+
+  .loginForm {
+    overflow: hidden;
+    width: 100%;
+    color: whitesmoke;
+    padding: 1.7rem 2rem;
+  }
+
+  .loginForm h4 {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+}
+
+@media (min-width: 667px) {
+
+  .form-check {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-left: 38px;
+  }
+
+  .form-check-label {
+    padding-left: 0 !important;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .loginBtn {
+    font-size: 1rem;
+    padding: 3rem auto;
+    width: 100%;
+  }
+
+  #app-background {
+    background: url('../../assets/images/bg_1.jpg');
+    width: 100%;
+    height: 100vh;
+    position: inherit;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .logo {
+    background-image: url('../../assets/images/carnet_logo_white.png');
+    width: 108px;
+    height: 32px;
+    margin-bottom: .4rem;
+    display: none;
+  }
+
+  .loginScreen {
+    margin: 4rem auto;
+  }
+
+  .loginForm {
+    overflow: hidden;
+    width: 100%;
+    color: whitesmoke;
+    padding: 1.7rem 2rem;
+  }
+
+  .loginForm h4 {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .form-check {
+    position: relative;
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-left: 38px;
+  }
+
+  .form-check-label {
+    padding-left: 0 !important;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .loginBtn {
+    font-size: 1rem;
+    padding: 3rem auto;
+    width: 100%;
+  }
+
+  #app-background {
+    background: url('../../assets/images/bg_1.jpg');
+    width: 100%;
+    height: 100vh;
+    position: inherit;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .logo {
+    background-image: url('../../assets/images/carnet_logo_white.png');
+    width: 108px;
+    height: 32px;
+    margin-bottom: .4rem;
+    display: none;
+  }
+
+  .loginScreen {
+    margin: 20rem auto;
+  }
+
+  .loginForm {
+    overflow: hidden;
+    width: 100%;
+    color: whitesmoke;
+    padding: 1.7rem 2rem;
+  }
+
+  .loginForm h4 {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  #app-background {
+    background-image: url('../../assets/images/bg_1.jpg');
+    opacity: 1;
+    width: 100%;
+    height: 66vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .loginForm {
+    border: 3px rgba(32, 49, 56, 0.1) solid;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    margin: 6.3rem auto 4rem;
+    background-color: rgba(40, 39, 43, 0.6);
+    width: 100%;
+    color: whitesmoke;
+    padding: 3rem 1rem;
+  }
+
+  .form-control {
+    margin: 0 auto;
+    display: block;
+    width: 90% !important;
+  }
+
+  .loginForm h4 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2rem;
+  }
+
+  .loginBtn {
+    color: #2085ad;
+    margin: 0 auto;
+    display: block;
+    max-width: 90%;
+  }
+
+  .bg-light {
+    background-color: transparent !important;
+  }
+
+  .slider-header {
+    margin: 10rem 0 4rem;
+    background-image: none;
+  }
+
+  h1 {
+    font-weight: 300;
+    color: #ebebeb;
+    font-size: 2.3rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    background-image: url('../../assets/images/carnet_logo_white.png');
+    width: 108px;
+    height: 32px;
+    margin-bottom: .4rem;
+  }
+
+  .loginScreen {
+    margin: 0 auto;
+  }
+
+}
+
+#errorMessage {
+  color: whitesmoke;
+  text-align: center;
+  background: red;
+  padding: 0.8rem;
+  display: none;
+}
+
+#successMessage {
+  color: whitesmoke;
+  text-align: center;
+  background: green;
+  padding: 0.8rem;
+  display: none;
+}
+
+

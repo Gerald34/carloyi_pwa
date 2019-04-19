@@ -1,0 +1,531 @@
+@media (min-width: 320px) {
+
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: -500px;
+    background-size: cover;
+  }
+
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 40% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 40px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width: 100%;
+    color: #777;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 100%;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+}
+
+@media (min-width: 480px) {
+  #background {
+    background:white;
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 15% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 19px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width: 100%;
+    color: #777;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+}
+
+@media (min-width: 576px) {
+  #background {
+    background-image: url('../../assets/images/girl.jpg');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 0 auto 0;
+    padding: 20% 20px;
+  }
+
+  .smartest h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: none;
+    text-align: center;
+  }
+
+  .smartest p {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .help a {
+    background: #f9a45e;
+    padding: 15px 40px;
+    width: 300px;
+    display: block;
+  }
+
+  #help {
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 22px;
+  }
+
+}
+
+@media (min-width: 667px) {
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 16% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 22px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width:60%;
+    color: #777;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+
+}
+
+@media (min-width: 768px) {
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 35vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 16% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 22px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width:60%;
+    color: #777;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 79%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 15% 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 40px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width: 79%;
+    color: #777;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+
+}
+
+@media (min-width: 1100px) {
+
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 35% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 40px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width: 650px;
+    color: #777;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+
+}
+
+@media (min-width: 1366px) {
+
+  #background {
+    background-image: url('../../assets/images/phone.png');
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+  }
+
+  .smartest {
+    width: 100%;
+    left: 0;
+    position: relative;
+    z-index: 10;
+    margin: 23% auto 0;
+    padding: 0;
+    height: auto;
+  }
+
+  .smartest h1 {
+
+    font-size: 40px;
+    font-weight: 600;
+    color: #006885;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .smartest p {
+    width: 650px;
+    color: #777;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .help {
+    margin: 20px 0;
+  }
+
+
+  .help a {
+    background: #006885;
+    padding: 10px 30px;
+    width: 300px;
+    display: block;
+    margin: 20px 0;
+    color: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .help a:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #006885;
+  }
+
+}
+
+.container {
+  max-width: 1236px;
+}

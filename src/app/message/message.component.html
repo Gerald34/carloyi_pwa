@@ -1,0 +1,90 @@
+<div *ngIf="isOwnMessage; else otherUser">
+
+
+    <div class="isOwnMessageContainer messageContainer">
+  
+      <div class="textContainer">
+  
+        <div class="username">
+          <p>{{ userName }}</p>
+        </div>
+  
+        <div class="message">
+  
+          <span *ngIf="fileInput; else noImage">
+            <span *ngIf="
+            incomeMessage.fileType === 'image/png' ||
+            incomeMessage.fileType === 'image/jpeg';
+            else pdf">
+              <a [href]="chatMessage.file" target="_blank" download="carloyi_file">
+                 <img [alt]="chatMessage.name"
+                      [src]="chatMessage.file"
+                      id="isOwnImageMessage"
+                      class="img-fluid img-thumbnail"/>
+                 <p><i class="fas fa-download"></i> {{ name }}</p>
+              </a>
+            </span>
+          </span>
+  
+          <ng-template #pdf>
+            <span *ngIf="incomeMessage.fileType === 'application/pdf'">
+  
+              <h3><i class="fas fa-file-pdf"></i></h3>
+              <p>{{ name }}
+                <br/>
+                <small>
+                  <a [href]="chatMessage.file" target="_blank" download="carloyi_file">
+                    Download PDF <i class="fas fa-download"></i>
+                  </a>
+                </small>
+              </p>
+            </span>
+          </ng-template>
+  
+          <ng-template #noImage></ng-template>
+  
+          <p>{{ messageContent }}</p>
+        </div>
+  
+        <div class="timeSent">
+          <p>
+            <small>{{ timeSent }}</small>
+          </p>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  <ng-template #otherUser>
+  
+    <div class="otherUserContainer messageContainer">
+  
+      <div class="textContainer">
+        <div class="username">
+          <p>{{ userName }}</p>
+        </div>
+  
+        <div class="message">
+          <span *ngIf="fileInput; else noImage">
+            <img (click)="open($event)" [alt]="name" [src]="file" id="imageMessage" class="img-fluid img-thumbnail"/>
+            <p>{{ name }}</p>
+          </span>
+  
+          <ng-template #noImage></ng-template>
+  
+          <p>{{ messageContent }}</p>
+  
+        </div>
+  
+        <div class="timeSent">
+          <p>
+            <small>{{ timeSent }}</small>
+          </p>
+        </div>
+      </div>
+  
+    </div>
+  </ng-template>

@@ -1,0 +1,814 @@
+@media(min-width: 200px) {
+
+  #each_car {
+    z-index: 0 !important;
+  }
+
+  mat-card, .carObject {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .car_info .seperator {
+    height: 1px;
+    background-color: #cfcfcf;
+    width: 60%;
+    display: block;
+    margin: 0 auto 0.6rem;
+  }
+
+  a.tooltips {
+    display: inline;
+    margin: 10px;
+  }
+
+  a.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #F9A45E;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 2px;
+  }
+
+  a.tooltips span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #F9A45E;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    left: 100%;
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 999;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 1.3em 1.3em !important;
+    z-index: 800;
+    border-radius: 50%;
+  }
+
+  .register h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+  .underline {
+    width: 600px;
+    margin: 2rem 0;
+    background: rgba(133, 132, 141, 0.6);
+    height: 1px;
+    display: block;
+  }
+
+  .mat-card, .mat-elevation-z {
+    border: 1px solid rgba(33,34,36,.15);
+    box-shadow: 1px 2px 2px -1px rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  mat-card-title h4 {
+    color: #006885;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+
+  mat-card-subtitle h4 {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 {
+    color: #999;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 span {
+    color: #006885;
+  }
+
+  .information {
+    width: 100%;
+    color: white;
+    background: #006885;
+    padding: 15px 20px;
+    border: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .information:hover {
+    background: #F9A45E;
+  }
+
+  .carObject {
+    cursor: pointer;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid rgba(33,34,36,.15);
+  }
+
+  .specials {
+    border-bottom: 1px solid #a9aeb9
+  }
+
+  .specials h2{
+    color: #006885;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .specials p {
+    color: #666b76;
+  }
+
+}
+
+@media(min-width: 414px) {
+
+  #each_car {
+    z-index: 0 !important;
+  }
+
+  mat-card, .carObject {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .car_info .seperator {
+    height: 1px;
+    background-color: #cfcfcf;
+    width: 60%;
+    display: block;
+    margin: 0 auto 0.6rem;
+  }
+
+  a.tooltips {
+    display: inline;
+    margin: 10px;
+  }
+
+  a.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #F9A45E;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 2px;
+  }
+
+  a.tooltips span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #F9A45E;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    left: 100%;
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 999;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 1.3em 1.3em !important;
+    z-index: 800;
+    border-radius: 50%;
+  }
+
+  .register h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+  .underline {
+    width: 600px;
+    margin: 2rem 0;
+    background: rgba(133, 132, 141, 0.6);
+    height: 1px;
+    display: block;
+  }
+
+  .mat-card, .mat-elevation-z {
+    border: 1px solid rgba(33,34,36,.15);
+    box-shadow: 1px 2px 2px -1px rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  mat-card-title h4 {
+    color: #006885;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 35px;
+  }
+
+  mat-card-subtitle h5 {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h4 {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 span {
+    color: #006885;
+  }
+
+  .information {
+    width: 100%;
+    color: white;
+    background: #006885;
+    padding: 15px 20px;
+    border: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .information:hover {
+    background: #F9A45E;
+  }
+
+  .carObject {
+    cursor: pointer;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid rgba(33,34,36,.15);
+  }
+
+  .specials {
+    border-bottom: 1px solid #a9aeb9
+  }
+
+  .specials h2{
+    color: #006885;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .specials p {
+    color: #666b76;
+  }
+
+}
+
+@media(min-width: 768px) {
+
+  #each_car {
+    z-index: 0 !important;
+  }
+
+  mat-card, .carObject {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .car_info .seperator {
+    height: 1px;
+    background-color: #cfcfcf;
+    width: 60%;
+    display: block;
+    margin: 0 auto 0.6rem;
+  }
+
+  a.tooltips {
+    display: inline;
+    margin: 10px;
+  }
+
+  a.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #F9A45E;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 2px;
+  }
+
+  a.tooltips span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #F9A45E;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    left: 100%;
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 999;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 1.3em 1.3em !important;
+    z-index: 800;
+    border-radius: 50%;
+  }
+
+  .register h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+  .underline {
+    width: 600px;
+    margin: 2rem 0;
+    background: rgba(133, 132, 141, 0.6);
+    height: 1px;
+    display: block;
+  }
+
+  .mat-card, .mat-elevation-z {
+    border: 1px solid rgba(33,34,36,.15);
+    box-shadow: 1px 2px 2px -1px rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  mat-card-title h4 {
+    color: #006885;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+  }
+
+  mat-card-subtitle h5 {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h4 {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 span {
+    color: #006885;
+  }
+
+  .information {
+    width: 100%;
+    color: white;
+    background: #006885;
+    padding: 15px 20px;
+    border: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .information:hover {
+    background: #F9A45E;
+  }
+
+  .carObject {
+    cursor: pointer;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid rgba(33,34,36,.15);
+  }
+
+  .specials {
+    border-bottom: 1px solid #a9aeb9
+  }
+
+  .specials h2{
+    color: #006885;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .specials p {
+    color: #666b76;
+  }
+
+}
+
+@media(min-width: 1024px) {
+
+  #each_car {
+    z-index: 0 !important;
+  }
+
+  mat-card, .carObject {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .car_info .seperator {
+    height: 1px;
+    background-color: #cfcfcf;
+    width: 60%;
+    display: block;
+    margin: 0 auto 0.6rem;
+  }
+
+  a.tooltips {
+    display: inline;
+    margin: 10px;
+  }
+
+  a.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #F9A45E;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 2px;
+  }
+
+  a.tooltips span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #F9A45E;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    left: 100%;
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 999;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 1.3em 1.3em !important;
+    z-index: 800;
+    border-radius: 50%;
+  }
+
+  .register h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+  .underline {
+    width: 600px;
+    margin: 2rem 0;
+    background: rgba(133, 132, 141, 0.6);
+    height: 1px;
+    display: block;
+  }
+
+  .mat-card, .mat-elevation-z {
+    border: 1px solid rgba(33,34,36,.15);
+    box-shadow: 1px 2px 2px -1px rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  mat-card-title h4 {
+    color: #006885;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+
+  mat-card-subtitle h5 {
+    color: #999;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h4 {
+    color: #999;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 span {
+    color: #006885;
+  }
+
+  .information {
+    width: 100%;
+    color: white;
+    background: #006885;
+    padding: 15px 20px;
+    border: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .information:hover {
+    background: #F9A45E;
+  }
+
+  .carObject {
+    cursor: pointer;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid rgba(33,34,36,.15);
+  }
+
+  .specials {
+    border-bottom: 1px solid #a9aeb9
+  }
+
+  .specials h2{
+    color: #006885;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .specials p {
+    color: #666b76;
+  }
+
+}
+
+@media(min-width: 1366px) {
+
+  #each_car {
+    z-index: 0 !important;
+  }
+
+  mat-card, .carObject {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .card {
+    overflow: hidden;
+  }
+
+  .car_info .seperator {
+    height: 1px;
+    background-color: #cfcfcf;
+    width: 60%;
+    display: block;
+    margin: 0 auto 0.6rem;
+  }
+
+  a.tooltips {
+    display: inline;
+    margin: 10px;
+  }
+
+  a.tooltips span {
+    position: absolute;
+    width: 140px;
+    color: #FFFFFF;
+    background: #F9A45E;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    visibility: hidden;
+    border-radius: 2px;
+  }
+
+  a.tooltips span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-right: 8px solid #F9A45E;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  a:hover.tooltips span {
+    visibility: visible;
+    opacity: 0.9;
+    left: 100%;
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 999;
+  }
+
+  .badge {
+    position: absolute;
+    padding: 1.3em 1.3em !important;
+    z-index: 800;
+    border-radius: 50%;
+  }
+
+  .register h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+  .underline {
+    width: 600px;
+    margin: 2rem 0;
+    background: rgba(133, 132, 141, 0.6);
+    height: 1px;
+    display: block;
+  }
+
+  .mat-card, .mat-elevation-z {
+    border: 1px solid rgba(33,34,36,.15);
+    box-shadow: 1px 2px 2px -1px rgba(0, 0, 0, 0);
+    margin-bottom: 20px;
+  }
+
+  mat-card-title h4 {
+    color: #006885;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+
+  mat-card-subtitle h5 {
+    color: #999;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h4 {
+    color: #999;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  mat-card-subtitle h5 span {
+    color: #006885;
+  }
+
+  .information {
+    width: 100%;
+    color: white;
+    background: #006885;
+    padding: 15px 20px;
+    border: transparent;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .information:hover {
+    background: #F9A45E;
+  }
+
+  .carObject {
+    cursor: pointer;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid rgba(33,34,36,.15);
+  }
+
+  .specials {
+    border-bottom: 1px solid #a9aeb9
+  }
+
+  .specials h2{
+    color: #006885;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .specials p {
+    color: #666b76;
+  }
+
+}

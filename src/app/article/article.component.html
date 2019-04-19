@@ -1,0 +1,23 @@
+<div style="margin-top: 100px; margin-bottom: 50px" *ngIf="articleType === 'featured'; else blogArticles">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h2>{{ article.featured_title }}</h2>
+        <div [innerHTML]="article.featured_story"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #blogArticles>
+  <div style="margin-top: 100px; margin-bottom: 50px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2>{{ article.blog_title }}</h2>
+          <div [innerHTML]="article.blog_description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,31 @@
+<section class="userItem" *ngFor="let user of users">
+  <div *ngIf="user.userID === userInformation.userData.id">
+
+    <div [id]="user.chatID" class="user" (click)="openThread($event)">
+      <div [id]="user.chatID" class="avatar">
+
+        <img [id]="user.chatID" src="../../assets/images/avatar_2.png" class="img-fluid"/>
+
+        <span *ngIf="user.status === 'online'; else offline">
+          <span [id]="user.chatID" class="indicator online animate bounceIn"></span>
+        </span>
+
+        <ng-template #offline>
+          <span [id]="user.chatID">
+            <span [id]="user.chatID" class="indicator offline animate bounceIn"></span>
+          </span>
+        </ng-template>
+
+      </div>
+
+      <div [id]="user.chatID" class="userInfo">
+        <h3 [id]="user.chatID">{{ user.dealerName }}</h3>
+        <h4 [id]="user.chatID">Deal: {{ user.carName }}</h4>
+        <p [id]="user.chatID">Offer: {{ user.offer | currency:'ZAR':"symbol-narrow" }}</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+

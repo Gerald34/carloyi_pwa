@@ -1,0 +1,319 @@
+<div class=" the_tabs">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <h3>
+          <i class="fas fa-filter"></i> {{ title }}
+        </h3>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="shadow">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 tabs tabs-style-bar">
+        <nav>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+            <li class="nav-item active">
+              <a class="icon icon-box active show" id="type-tab" data-toggle="tab" href="#type" role="tab"
+                aria-controls="type" aria-selected="true" aria-checked="true">
+                <span>Car Type</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="budget-tab" data-toggle="tab" href="#budget" class="icon icon-box" role="tab" aria-controls="budget"
+                aria-selected="false">
+                <span>Budget</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="usage-tab" data-toggle="tab" href="#usage" class="icon icon-box" role="tab" aria-controls="profile"
+                aria-selected="false">
+                <span>Usage</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a id="practicality-tab" data-toggle="tab" href="#practicality" class="icon icon-box" role="tab"
+                aria-controls="practicality" aria-selected="false">
+                <span>Priorities</span>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faded-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <section class="the_options">
+
+          <div class="tabs tabs-style-bar">
+            <div class="tab-content" id="myTabContent">
+
+              <!--Car Type Tab-->
+              <div class="tab-pane fade show active" id="type" role="tabpanel" aria-labelledby="type-tab">
+                <div class="row">
+
+                  <div class="col-md-12">
+                    <div class="form-inline">
+
+                      <div *ngFor="let type of carTypes">
+
+                        <div class="form-check">
+                          <div class="col-xs-12">
+                            <mat-checkbox class="example-margin"
+                                          [name]="type.car_type"
+                                          [checked]="carTypes.indexOf(type.car_type) >= 0"
+                                          [value]="type.car_type"
+                                          [id]="type.car_type"
+                                          (change)="getValue(type.car_type, $event)">
+                              <label class="tooltips form-check-label"
+                                     [for]="type.car_type">
+                                {{ type.car_type }}
+
+                                <span>
+                                  <div class="toolImg"><img class="img-fluid" [src]="(imagepath + type.images)" /></div>
+
+                                  <div class="toolText">
+                                    {{ type.tooltip }}
+                                  </div>
+
+                                </span>
+
+                              </label>
+                            </mat-checkbox>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Budget Tab -->
+              <div class="tab-pane fade" id="budget" role="tabpanel" aria-labelledby="budget-tab">
+                <div class="row">
+
+                  <div class="col-lg-12">
+                    <div class="slidecontainer">
+                      <ion-range-slider #budget class="range-slider" type="double" grid="true" min="80000" from_min="80000"
+                        max="3000000" to="350000" step="10000" prefix="Estimated Price: " postfix=" Rands"
+                        decorate_both="false" grid_num="10" (onFinish)="getBudget(budget)">
+                      </ion-range-slider>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Usage Tab-->
+              <div class="tab-pane fade" id="usage" role="tabpanel" aria-labelledby="usage-tab">
+
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <div class="slider-label">
+                      <h4>City Driving</h4>
+                      <ion-range-slider #driving class="slides" min="0" max="10" from="0" (onFinish)="getDriving(driving)"></ion-range-slider>
+                    </div>
+
+                    <div class="slider-label">
+                      <h4>Number of seats</h4>
+                      <ion-range-slider #seats class="slides" min="0" max="10" from="0" (onFinnish)="getSeats(seats)"></ion-range-slider>
+                    </div>
+
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="slider-label">
+                      <h4>Off-roading</h4>
+                      <ion-range-slider #road class="slides" min="0" max="10" from="0" (onFinish)="getRoad(road)"></ion-range-slider>
+                    </div>
+
+                    <div class="slider-label">
+                      <h4>Moving luggage</h4>
+                      <ion-range-slider #luggage class="slides" min="0" max="10" from="0" (onFinish)="getLuggage(luggage)"></ion-range-slider>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="slider-label">
+                      <h4>Long distance driving</h4>
+                      <ion-range-slider #distance class="slides" min="0" max="10" from="0" (onFinish)="getDistance(distance)"></ion-range-slider>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <!--Practicality Tab -->
+              <div class="tab-pane fade" id="practicality" role="tabpanel" aria-labelledby="practicality-tab">
+                <div class="row">
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+
+                    <div class="slider-label">
+                      <h4>Fuel efficiency</h4>
+                      <ion-range-slider #fuel class="slides" min="0" max="10" from="0" to="0" (onFinish)="getFuel(fuel)"></ion-range-slider>
+                    </div>
+
+                    <div class="slider-label">
+                      <h4>Enjoyment</h4>
+                      <ion-range-slider #enjoyment class="slides" min="0" max="10" from="0" to="0" (onFinish)="getEnjoyment(enjoyment)"></ion-range-slider>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="slider-label">
+                      <h4>Safety & Space</h4>
+                      <ion-range-slider #practicality class="slides" min="0" max="10" from="0" (onFinish)="getPracticality(practicality)"></ion-range-slider>
+                    </div>
+
+                    <div class="slider-label">
+                      <h4>Performance</h4>
+                      <ion-range-slider #performance class="slides" min="0" max="10" from="0" to="0" (onFinish)="getPerformance(performance)"></ion-range-slider>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="slider-label">
+                      <h4>Comfort</h4>
+                      <ion-range-slider #comfort class="slides" min="0" max="10" from="0" (onFinish)="getComfort(comfort)"></ion-range-slider>
+                    </div>
+
+                    <div class="slider-label">
+                      <h4>Reliability</h4>
+                      <ion-range-slider #reliability class="slides" min="0" max="10" from="0" (onFinish)=getReliability(reliability)></ion-range-slider>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <div class="the_btns">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <button (click)="reset()" type="reset" class="btn searchBtn resetBtn">Reset
+              <i class="fas fa-level-down-alt"></i>
+            </button>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-4">
+            <button (click)="filterSearch()" class="btn searchBtn updateBtn">Update
+              <i class="fas fa-level-up-alt"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="allCars">
+
+<div class="similar_cars">
+  <div class="similar_cars_inner">
+    <h4>Filters Search Results : ( {{ cars_found }} Cars Found )</h4>
+  </div>
+</div>
+
+  <div class="similar_cars_results">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12">
+            <div class="row">
+
+              <div *ngFor="let item of collection | paginate: { itemsPerPage: 8, currentPage: page }"
+                id="each_car"  
+                class="col-lg-3 col-md-4 col-sm-12 animated fadeIn">
+
+
+                <a *ngIf="item.total_score"
+                   class="tooltips badge badge-info">
+                  {{ item.total_score }}
+                  <span>Rating</span>
+                </a>
+
+                <mat-card class="carObject" [id]="item.id">
+                  <img mat-card-image [src]="(imagepath + item.car_image)">
+
+                  <mat-card-content>
+
+                    <mat-card-title>
+                      <h4><i class="fas fa-car"></i> {{ item.name }}</h4>
+                      <div class="seperator"></div>
+                    </mat-card-title>
+
+                    <mat-card-subtitle>
+
+                      <h5>Retail Price |
+                        <span>{{ item.price | currency:'ZAR':"symbol-narrow" }}</span>
+                      </h5>
+                      <h5>Vehicle Type | {{ item.car_type }}</h5>
+                    </mat-card-subtitle>
+
+                  </mat-card-content>
+
+                  <mat-card-actions class="EntryCar">
+                    <input #itemID class="itemID" type="hidden" [value]="item.id">
+                    <button class="information" (click)="getCarInfo(itemID.value)">
+                      <i class="fas fa-info-circle"></i> Car Information
+                    </button>
+                  </mat-card-actions>
+                </mat-card>
+
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="pagination">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="pageNumbers">
+            <pagination-controls
+              class="paginate"
+              (pageChange)="page = $event">
+            </pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+

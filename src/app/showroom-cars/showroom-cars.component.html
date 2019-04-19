@@ -1,0 +1,69 @@
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="wishlistHeader">
+      <h1 class="">All cars in your personal showroom</h1>
+    </div>
+  </div>
+
+  <div *ngFor="let userCars of allUserCars | paginate: { itemsPerPage: 4, currentPage: page}"
+       class="col-lg-3 cars animated fadeIn">
+
+    <span (click)="removeCar(userCars.id, uid.value)"
+          class="deleteCar">
+      <p>x</p>
+    </span>
+
+    <div class="card">
+      <img class="img-fluid" [src]="(imagePath + userCars.car_image)" [alt]="userCars.name" />
+
+      <div class="card-body">
+        <div class="car_info">
+          <h4>{{ userCars.name }}</h4>
+          <div class="seperator"></div>
+
+          <h5>Retail Price |
+            <span>{{ userCars.price | currency:'ZAR':"symbol-narrow" }}</span>
+          </h5>
+
+          <p>{{ userCars.description }}</p>
+
+          <input #itemID class="itemID" type="hidden" [value]="userCars.id">
+          <input type="hidden" #uid [value]="userDataInfo.id">
+          <input type="hidden" #user_email [value]="userDataInfo.email">
+
+          <div *ngIf="userDataInfo.status === 1; else info">
+            <a class="btn mb-1 requestButton"
+               data-toggle="modal"
+               data-target=".extras"
+               (click)="showRoomMethods.getOfferData(itemID.value, uid.value, user_email.value)">
+              <fa name="telegram"></fa> Get Offers
+            </a>
+          </div>
+
+          <ng-template #info>
+            <a class="btn mb-1 requestButton" data-toggle="modal" data-target=".profile">
+              <fa name="telegram"></fa> Get Offers
+            </a>
+          </ng-template>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<section class="pagination">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="pageNumbers">
+          <pagination-controls class="paginate" (pageChange)="page = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

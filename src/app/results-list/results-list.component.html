@@ -1,0 +1,28 @@
+<div class="top-results">
+
+    <section class="options_header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>We have the following options available.</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="">
+      <div class="carsContainer">
+
+        <div class="" *ngIf="carsData; else NoCars">
+          <app-car-carousel [car-list]="carsData"></app-car-carousel>
+        </div>
+  
+        <ng-template #NoCars>
+          <div class="col-lg-12">No data Found</div>
+        </ng-template>
+  
+      </div>
+    </div>
+  
+  </div>
+  

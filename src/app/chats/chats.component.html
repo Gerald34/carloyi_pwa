@@ -1,0 +1,20 @@
+<section class="chatWindow">
+
+  <div class="ChatHeader">
+    <div class="users">
+      <h2>Active Dealers</h2>
+    </div>
+    <div class="conversation">
+      <h2>Conversation</h2>
+    </div>
+  </div>
+
+  <div class="UserList">
+    <app-active-users [activeUsers]="ActiveUsers"></app-active-users>
+  </div>
+
+  <div class="threads">
+    <app-threads></app-threads>
+  </div>
+
+</section>

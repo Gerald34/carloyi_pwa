@@ -1,0 +1,328 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1236px;
+    }
+}
+
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ngucarousel {
+    padding-bottom: 20px !important;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0,0,0,.9) !important;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006885;
+}
+
+.theme-btn {
+    background: #4aa0d5;
+    color: whitesmoke;
+    padding: 0.6rem 45px;
+    font-weight: 600;
+    border-radius: 0;
+    font-size: 0.8rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.theme-btn:hover {
+    background-color: #4188b5;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+#error p {
+    color: red;
+    font-size: 0.9rem;
+    margin: 1rem 0 1rem 0;
+    font-weight: 500;
+}
+
+.loading-text {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 100 !important;
+    font-size: 1.7rem;
+    padding-top: 31% !important;
+}
+
+.spinner {
+    opacity: 0.97 !important;
+    background: rgb(0, 0, 0) !important;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(65, 136, 181, 1) 50%, rgba(0, 0, 0, 1) 100%) !important;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(65, 136, 181, 1) 50%, rgba(0, 0, 0, 1) 100%) !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(65, 136, 181, 1) 50%, rgba(0, 0, 0, 1) 100%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1) !important;
+}
+
+.lds-roller {
+    top: 40% !important;
+}
+
+/* Antiman */
+
+.button--antiman {
+    background: none;
+    border: none;
+    height: 60px;
+}
+
+.button--antiman.button--inverted, .button--antiman.button--inverted-alt {
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--antiman>span {
+    padding-left: 0.35em;
+}
+
+.button--antiman::before, .button--antiman::after {
+    content: '';
+    z-index: -1;
+    border-radius: inherit;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.button--antiman::before {
+    border: 2px solid #37474f;
+    opacity: 0;
+    -webkit-transform: scale3d(1.2, 1.2, 1);
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.button--antiman.button--border-thin::before {
+    border-width: 1px;
+}
+
+.button--antiman.button--border-medium::before {
+    border-width: 2px;
+}
+
+.button--antiman.button--border-thick::before {
+    border-width: 3px;
+}
+
+.button--antiman.button--inverted::before {
+    border-color: #006885;
+}
+
+.button--antiman.button--inverted-alt::before {
+    border-color: #006885;
+}
+
+.button--antiman::after {
+    background: #fff;
+}
+
+.button--antiman.button--inverted::after {
+    background: #006885;
+}
+
+.button--antiman.button--inverted-alt::after {
+    background: #006885;
+}
+
+.button--antiman.button--inverted:hover {
+    color: #006885;
+}
+
+.button--antiman.button--inverted-alt:hover {
+    color: #006885;
+}
+
+.button--antiman:hover::before {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.button--antiman:hover::after {
+    opacity: 0;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+}
+
+/* Common button styles */
+
+.button {
+    float: left;
+    width: 100%;
+    display: block;
+    margin: 1rem auto;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.45rem;
+    background: none;
+    color: inherit;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button>span {
+    vertical-align: middle;
+}
+
+/* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+
+.bg-1 .button {
+    color: #37474f;
+    border-color: #37474f;
+}
+
+.bg-2 .button {
+    color: #ECEFF1;
+    border-color: #ECEFF1;
+}
+
+.bg-3 .button {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Sizes */
+
+.button--size-s {
+    font-size: 14px;
+}
+
+.button--size-m {
+    font-size: 16px;
+}
+
+.button--size-l {
+    font-size: 18px;
+}
+
+@media (min-width: 375px) {
+    .lds-roller {
+        left: 40% !important;
+    }
+    .loading-text {
+        top: 40% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .lds-roller {
+        left: 45% !important;
+    }
+    .loading-text {
+        top: 0 !important;
+    }
+}
+
+.controls-top {
+    width: 100% !important;
+    margin: 1rem auto !important;
+    display: block !important;
+    color: whitesmoke !important;
+}
+
+.controls-top a {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+    background: #006885;
+    padding: 0.5rem 1.3rem;
+    position: absolute;
+}
+
+.controls-top a:first-child {
+    float: left;
+    left: -70px;
+    top: 110px;
+}
+
+.controls-top a:last-child {
+    float: left;
+    right: -70px;
+    top: 110px;
+}
+
+.controls-top a:hover {
+    background: #eee !important;
+}
+
+.animated {
+    visibility: visible !important;
+}
+
+.hide-on-init {
+    visibility: hidden;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8 !important;
+}
+
+.modal-open .modal {
+    overflow-y: scroll !important;
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 100000000;
+}
+
+.badge {
+  position: absolute;
+  padding: 1.3em 1.3em !important;
+  z-index: 1030;
+  border-radius: 50% !important;
+  background: #F9A45E !important;
+  color: #fefefe !important;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}

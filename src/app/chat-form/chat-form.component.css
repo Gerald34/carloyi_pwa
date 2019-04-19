@@ -1,0 +1,60 @@
+.form-group>textarea {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #555;
+  border-radius: 0 !important;
+  position: relative;
+  border: none;
+  width: 80%;
+  height: 70px;
+  resize: none;
+  outline: none;
+  overflow: auto;
+  float: right;
+}
+
+textarea {
+  width: 80%;
+  float: right;
+}
+
+#upload{
+  display:none
+}
+
+.attach {
+  cursor: pointer;
+}
+
+.form-group>textarea::placeholder {
+  opacity: 0.5;
+}
+
+.form-group {
+  margin-bottom: 0 !important;
+}
+
+.send {
+  cursor: pointer;
+  z-index: 10;
+  background: #f3f3f3;
+  padding: 24px 0 24px 0;
+  color: #777;
+  float: right;
+  width: 10%;
+  text-align: center;
+}
+
+.attach {
+  z-index: 10000;
+  width: 10%;
+  float: left;
+  background: #f3f3f3;
+  text-align: center;
+  padding: 31px 0 24px 0;
+}
+
+.attach i {
+  font-size: 1.1rem;
+  color: #999;
+}

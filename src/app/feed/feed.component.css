@@ -1,0 +1,45 @@
+@media (min-width: 200px) {
+  .feed {
+    width: 100%;
+    height: 100%;
+  }
+
+  .noChat {
+    margin: 20% auto 0;
+    display: block;
+    width: 80%;
+    padding: 3rem;
+    text-align: center;
+    background-color: #efefef;
+  }
+
+  .noChat h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+}
+
+@media (min-width: 600px) {
+  .feed {
+    width: 100%;
+    height: 100%;
+  }
+
+  .noChat {
+    margin: 20% auto 0;
+    display: block;
+    width: 50%;
+    padding: 3rem;
+    text-align: center;
+    background-color: #efefef;
+  }
+
+  .noChat h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #aaa;
+  }
+
+}

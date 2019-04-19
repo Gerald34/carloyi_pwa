@@ -1,0 +1,773 @@
+.the_tabs {
+  margin: 0rem auto 0;
+}
+
+.options_header {
+  background-color: #e5e5e5;
+  text-align: center;
+}
+
+.modal-body img {
+  margin-bottom: 1.4rem;
+}
+
+.modal-body h4 {
+  background: #f7f8fa;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.3rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #006885;
+}
+
+.modal-body h5 {
+  font-weight: 400;
+  font-size: 0.88rem;
+  color: #aaa;
+}
+
+.modal-body p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.loginBtn {
+  background: #006885;
+  color: whitesmoke;
+}
+
+.options_header h1 {
+  font-size: 1.1rem;
+  color: #006885;
+  text-align: center !important;
+}
+
+.budget_output {
+  background-color: white;
+  padding: 1.4rem;
+}
+
+.budget_output h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #a2a2a2;
+  line-height: 1.7rem;
+}
+
+.slidecontainer {
+  width: 100%;
+  /* Width of the outside container */
+}
+
+/* The slider itself */
+
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4CAF50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #4CAF50;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.per_month {
+  font-size: 0.99rem;
+  font-style: italic;
+  color: #006885;
+}
+
+.budget_output p {
+  text-align: center;
+  color: #a2a2a2;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.the_tabs {
+  background-color: #006885;
+  padding: 0.95rem 0.8rem 0.6rem 0.8rem;
+}
+
+.the_tabs h3 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tab-content {
+  padding: 2rem 0;
+  max-width: 80%;
+  display: block;
+  margin: 1.5rem auto;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background: white;
+  z-index: 101;
+  position: relative;
+}
+
+.faded-bg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  background: #ffffffba;
+  ;
+}
+
+.faded-bg::after {
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  opacity: 0;
+}
+
+.similar_cars {
+  border-top: 2px solid rgba(190, 190, 190, 0.15);
+  padding: 0.9rem 0 0.5rem;
+  color: #fefefe;
+  font-weight: 300;
+  margin-bottom: 0;
+  text-align: center;
+  background: #006885;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  z-index: -100;
+  height: 5%;
+}
+
+.similar_cars h4 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.the_btns {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-top: 1px solid #ccc;
+}
+
+.searchBtn {
+  width: 100%;
+  color: whitesmoke;
+  padding: 0.7rem 40px;
+  font-weight: 300;
+  border-radius: 0;
+  font-size: 14px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn {
+  margin: 0;
+}
+
+.resetBtn {
+  background-color: rgba(100, 100, 100, 0.6);
+}
+
+.updateBtn {
+  background-color: #006885;
+}
+
+.resetBtn:hover {
+  background-color: #cc0000;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.updateBtn:hover {
+  background-color: #4188b5;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.similar_cars_results {
+  padding: 0;
+}
+
+@media (min-width: 200px) {
+  .similar_cars_results {
+    padding: 20px;
+    /* height: 652px; 
+    overflow-y: scroll;
+    */
+  }
+  .btn {
+    /* margin: 0 !important; */
+    width: 100%;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+/* Media Queries */
+
+@media (min-width: 375px) {
+  .options_header {
+    background-color: #e5e5e5;
+    margin-top: 3.8rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  .options_header h1 {
+    font-size: 0.8rem;
+    color: #4aa0d5;
+    text-align: center !important;
+  }
+  .budget_output {
+    background-color: white;
+    padding: 1.4rem;
+  }
+  .budget_output h2 {
+    font-size: 0.8rem;
+    text-align: center;
+    color: #a2a2a2;
+    line-height: 1.7rem;
+  }
+  .per_month {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #006885;
+  }
+  .budget_output p {
+    text-align: center;
+    color: #a2a2a2;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  .the_tabs h3 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .similar_cars_results {
+    padding-top: 3%;
+    height: 89.9%;
+    display: block;
+  }
+  .options_header {
+    background-color: #eee;
+    padding: 1.4rem;
+    margin-top: 3.3rem;
+    text-align: center;
+  }
+  .options_header h1 {
+    font-size: 1.1rem;
+    color: #006885;
+    text-align: center !important;
+  }
+  .budget_output {
+    background-color: white;
+    padding: 1.4rem;
+  }
+  .budget_output h2 {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #a2a2a2;
+    line-height: 1.7rem;
+  }
+  .per_month {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #006885;
+  }
+  .budget_output p {
+    text-align: center;
+    color: #a2a2a2;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .the_tabs h3 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 14px;
+  }
+}
+
+.moreCarInfo {
+  padding: 3rem 1.5rem;
+  background: #504c99;
+  width: 100%;
+}
+
+.tabs {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+/* Control box
+  ------------------------------------------------ */
+
+.control-box {
+  width: 100%;
+}
+
+.carousel-control {
+  background: #666 !important;
+  border: 0px;
+  border-radius: 0px;
+  display: inline-block;
+  font-size: 34px;
+  font-weight: 200;
+  line-height: 18px;
+  opacity: 0.5;
+  padding: 4px 10px;
+  margin: 30px -20px 0;
+  height: 30px;
+  width: 30px;
+}
+
+.form-inline label {
+  margin-right: 1rem !important;
+}
+
+.form-inline {
+  padding-left: 137px;
+}
+
+.slider-label h4 {
+  font-size: 0.8rem;
+  text-align: left;
+  color: #006885;
+}
+
+.slides {
+  margin-bottom: 2rem !important;
+  display: block;
+}
+
+.nav-item a[aria-selected="true"] {
+  background-color: #006885;
+  color: whitesmoke;
+}
+
+.pageNumbers {
+  min-width: 300px;
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.pagination {
+  height: 5%;
+  border-top: 0 solid #d2dae6;
+  background: whitesmoke;
+  padding: 0.2rem 0 0;
+  border-radius: 0;
+}
+
+/* Car type checkbox */
+
+label.tooltips {
+  position: relative;
+  display: inline;
+}
+
+label.tooltips span {
+  position: absolute;
+  width: 100%;
+  min-width: 200px;
+  color: #FFFFFF;
+  background: #F9A45E;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 2px;
+  font-size: 0.6rem;
+  display: block;
+  padding: 0.4rem;
+}
+
+label.tooltips span .toolImg {
+  width: 100%;
+  float: left;
+}
+
+label.tooltips span .toolText {
+  width: 0%;
+  float: right;
+  color: whitesmoke;
+}
+
+label.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0;
+  height: 0;
+  border-right: 8px solid #F9A45E;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+label:hover.tooltips span {
+  visibility: visible;
+  opacity: 1;
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 15px;
+  z-index: 9999999999;
+  position: absolute;
+}
+
+.form-check {
+  justify-content: start !important;
+  width: 200px !important;
+}
+
+#each_car {
+  z-index: 0 !important;
+  margin-bottom: 20px;
+}
+
+#car {
+  z-index: 0;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#car:hover {
+  -webkit-box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 18px 0 rgba(0, 0, 0, 0.2);
+}
+
+.infoOverlay {}
+
+.carInformation {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 400;
+  color: #f3f3f3;
+  width: 100%;
+  font-weight: 200;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.carInformation small {
+  font-size: 0.9rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+}
+
+.infoOverlay #each_car_overlay {
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 200;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006885+0,00485e+100&0.8+0,0.6+100 */
+  background: -moz-linear-gradient(-45deg, rgba(0, 104, 133, 0.95) 0%, rgba(0, 72, 94, 0.9) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(0, 104, 133, 0.95) 0%, rgba(0, 72, 94, 0.9) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(0, 104, 133, 0.95) 0%, rgba(0, 72, 94, 0.9) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc006885', endColorstr='#9900485e', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  opacity: 0;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.infoOverlay:hover .carInformation {
+  opacity: 1;
+}
+
+.infoOverlay:hover #each_car_overlay {
+  opacity: 1;
+}
+
+.card {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  overflow: hidden;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+}
+
+.car_image {
+  margin-bottom: 1.2rem;
+}
+
+.car_info {
+  text-align: center;
+}
+
+.car_info h4 {
+  color: #006885;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.car_info h5 {
+  color: #999999;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.car_info h5 span {
+  color: #006885;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.car_info .seperator {
+  height: 1px;
+  background-color: #cfcfcf;
+  width: 60%;
+  display: block;
+  margin: 0 auto 0.6rem;
+}
+
+a.tooltips {
+  display: inline;
+}
+
+a.tooltips span {
+  position: absolute;
+  width: 140px;
+  color: #FFFFFF;
+  background: #F9A45E;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 2px;
+}
+
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -8px;
+  width: 0;
+  height: 0;
+  border-right: 8px solid #F9A45E;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.9;
+  left: 100%;
+  top: 50%;
+  margin-top: -15px;
+  margin-left: 15px;
+  z-index: 999;
+}
+
+.badge {
+  position: absolute;
+  padding: 1.3em 1.3em !important;
+  z-index: 800;
+  border-radius: 50%;
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+  .irs-single {
+    left: 0 !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 200px) {
+  .allCars {
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    padding-top: 0;
+  }
+  .form-inline {
+    padding-left: 0;
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .allCars {
+    width: 100%;
+    background-size: cover;
+    height: auto;
+    padding-top: 3.6%;
+  }
+}
+
+.badge {
+  position: absolute;
+  padding: 1.3em 1.3em !important;
+  z-index: 1030;
+  border-radius: 50% !important;
+  background: #F9A45E;
+  color: #fefefe;
+  margin: 6px;
+  -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+}
+
+.form-inline label {
+  font-size: 14px;
+}
+
+.ngx-pagination {
+  margin-left: 0;
+  margin-bottom: 0.3rem !important;
+}
+
+.ngx-pagination li {
+  font-size: 12px !important;
+}
+
+mat-card-content {
+  text-align: center;
+}
+
+mat-card-title h4 {
+  font-size: 0.7rem;
+  color: #006885;
+  font-weight: 700;
+}
+
+mat-card-subtitle h5:first-child {
+  color: #666;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+mat-card-subtitle h5 span {
+  color: #006885;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+mat-card-subtitle h5 {
+  color: #666;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+mat-card-subtitle p {
+  color: #999;
+  font-size: 0.7rem;
+}
+
+mat-card-actions a {
+  padding:0.7rem 0;
+  border-radius: 0.1rem;
+  width: 100%;
+  background: #006885;
+  margin: 1.3rem auto 0 auto;
+  display: block;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.information {
+  width: 100%;
+  color: white;
+  background: #006885;
+  padding: 15px 20px;
+  border: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.information:hover {
+  background: #F9A45E;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1236px;
+  }
+}

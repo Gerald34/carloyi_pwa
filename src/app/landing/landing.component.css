@@ -1,0 +1,314 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+
+h3 {
+  color: #dfdfdf;
+  font-weight: 300;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+select {
+  background: none;
+}
+
+h4 {
+  color: #dfdfdf;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#allMakes select,
+#makeModels select {
+  -moz-padding: 0;
+  padding: 0;
+}
+
+#cover {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.option-button>a>fa {
+  margin-left: 10px;
+}
+
+.option-button {
+  width: 15rem;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: #f9a45e;
+  border: 1px solid #f9a45ed7;
+  color: #dfdfdf !important;
+  padding: .8rem 2.3rem;
+  margin: 1.6rem auto;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 1px 1px rgba(20, 23, 28, .2), 0 6px 11px 0 rgba(20, 23, 28, .2);
+}
+
+.option-button:hover {
+  background: #006885d2;
+  border: 1px solid #00688552;
+}
+
+.option-button-active {
+  width: 15rem;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: #f9a45e;
+  border: 1px solid #f9a45ed7;
+  color: whitesmoke !important;
+  padding: .8rem 2.3rem;
+  margin: 1.6rem auto;
+  border-radius: 0px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.option-button-active:hover {
+  background: #f9a45ed7;
+  border: 1px solid #cf894fd7;
+}
+
+.seperator {
+  width: 300px;
+  display: block;
+  height: 1px;
+  background-color: rgba(245, 245, 245, 0.397);
+  margin: 1.5rem auto 1.5rem;
+}
+
+#cancel-a,
+#cancel-b {
+  color: #ebebeb;
+  font-weight: 500;
+  margin: 1rem auto;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+#searchByName input,
+#affordabilitySearch input {
+  background-color: rgba(255, 255, 255, 0);
+  border: whitesmoke 1px solid;
+}
+
+#more {
+  display: none;
+}
+
+.text_link {
+  cursor: pointer;
+  color: #006885 !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+}
+
+#loading {
+  width: 100%;
+  height: 40px;
+}
+
+#loader {
+  background-image: url("../../assets/images/loader.svg");
+  width: 120px;
+  height: 15px;
+  margin: 1.4rem auto;
+  display: block;
+}
+
+#wait {
+  color: whitesmoke;
+  text-align: center;
+}
+
+.col-lg-4:nth-child(1) {
+  animation-delay: 6s;
+}
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 1236px;
+  }
+
+  .randomCars {
+    background: #f6f7fa;
+    width: 100%;
+    padding: 50px 0 100px 0;
+    display: block;
+  }
+
+  .whyText h1 {
+    color: #006885;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .whyText h3 {
+    font-weight: 600 !important;
+    font-size: 22px;
+    text-align: left;
+    color: #909091;
+  }
+
+  .whyText p {
+    font-weight: 500 !important;
+    font-size: 18px;
+    line-height: 28px;
+    color: #909091;
+    text-align: left;
+  }
+
+  .whyContent {
+    background: #f8f8f8;
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 1236px;
+  }
+
+  .randomCars {
+    background: #f6f7fa;
+    width: 100%;
+    padding: 50px 0 100px 0;
+    display: block;
+  }
+
+  .whyText h1 {
+    color: #006885;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .whyText h3 {
+    font-weight: 600 !important;
+    font-size: 22px;
+    text-align: left;
+    color: #909091;
+  }
+
+  .whyText p {
+    font-weight: 500 !important;
+    font-size: 18px;
+    line-height: 28px;
+    color: #909091;
+    text-align: left;
+  }
+
+  .whyContent {
+    background: #f8f8f8;
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1236px;
+  }
+
+  .randomCars {
+    background: #f6f7fa;
+    width: 100%;
+    padding: 50px 0 100px 0;
+    display: block;
+  }
+
+  .whyText h1 {
+    color: #006885;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .whyText h3 {
+    font-weight: 600 !important;
+    font-size: 18px;
+    text-align: left;
+    color: #909091;
+  }
+
+  .whyText p {
+    font-weight: 500 !important;
+    font-size: 14px;
+    line-height: 28px;
+    color: #909091;
+    text-align: left;
+  }
+
+  .whyContent {
+    background: #f8f8f8;
+    padding: 80px 0;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1236px;
+  }
+
+  .randomCars {
+    background: #f6f7fa;
+    width: 100%;
+    padding: 50px 0 100px 0;
+    display: block;
+  }
+
+  .whyText h1 {
+    color: #006885;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .whyText h3 {
+    font-weight: 600 !important;
+    font-size: 22px;
+    text-align: left;
+    color: #909091;
+  }
+
+  .whyText p {
+    font-weight: 500 !important;
+    font-size: 18px;
+    line-height: 28px;
+    color: #909091;
+    text-align: left;
+  }
+
+  .whyContent {
+    background: #f8f8f8;
+    padding: 80px 0;
+  }
+}
+
+

@@ -1,0 +1,72 @@
+<div id="option-a">
+  <div class="seperator"></div>
+  <h4 style="font-weight: 400;">
+    I have a car in mind but want to find the best possible deal.
+  </h4>
+
+  <div>
+    <a class="option-button" id="option-1">
+      <i class="fas fa-search"></i> Select Car
+    </a>
+  </div>
+</div>
+
+<div id="option-a-form" class="">
+  <div id="searchByName">
+    <div id="cancel-a">
+      <a> <i class="fas fa-close"></i> Hide </a>
+    </div>
+    <form id="modelForm">
+      <div class="form-group" id="allMakes">
+        <!--<div *ngIf="allMakes; else noBrands">-->
+        <select class="form-control" (change)="getModelsID($event)">
+          <option selected value="0">Select Manufacturer</option>
+          <option
+            *ngFor="let brand of allMakes"
+            [value]="brand.id"
+            [selected]="brand.id == makeModel"
+          >
+            {{ brand.brand }}
+          </option>
+        </select>
+        <!--</div>-->
+
+        <ng-template #noBrands>
+          <h1>No Brands</h1>
+        </ng-template>
+
+        <!--<select class="form-control" id="carMake"></select>-->
+      </div>
+
+      <div
+        class="form-group"
+        id="makeModels"
+        *ngIf="returnMakeModel; else noData"
+      >
+        <select
+          #brandModel
+          name="brandModel"
+          class="form-control"
+          (change)="getSelectedModelsID($event)"
+        >
+          <option selected value="0">Select Model</option>
+          <option
+            *ngFor="let model of returnMakeModel"
+            [value]="model.id"
+            [selected]="model.id == makeModel"
+          >
+            {{ model.model }}
+          </option>
+        </select>
+      </div>
+
+      <ng-template #noData></ng-template>
+
+      <div>
+        <a class="option-button-active" (click)="searchByModelID()">
+          <i class="fas fa-search"></i> Search Car
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

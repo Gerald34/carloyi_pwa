@@ -1,0 +1,48 @@
+<ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">
+  <ngu-tile style="padding-bottom:20px;" *nguCarouselDef="let item; let i = index">
+    <div>
+
+      <a *ngIf="item.total_score"
+         class="tooltips badge badge-info">
+        {{ item.total_score }}
+        <span>Rating</span>
+      </a>
+
+      <mat-card class="carObject" [id]="item.id">
+        <img mat-card-image [src]="(imagepath + item.car_image)">
+
+        <mat-card-content>
+
+          <mat-card-title>
+            <h4><i class="fas fa-car"></i> {{ item.name }}</h4>
+            <div class="seperator"></div>
+          </mat-card-title>
+
+          <mat-card-subtitle>
+
+            <h5>Retail Price |
+              <span>{{ item.price | currency:'ZAR':"symbol-narrow" }}</span>
+            </h5>
+            <h5>Vehicle Type | {{ item.car_type }}</h5>
+          </mat-card-subtitle>
+
+        </mat-card-content>
+
+        <mat-card-actions class="EntryCar">
+          <input #itemID class="itemID" type="hidden" [value]="item.id">
+          <button class="information" (click)="getCarInfo(itemID.value)">
+            <i class="fas fa-info-circle"></i> Car Information
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </ngu-tile>
+
+  <a NguCarouselPrev class="leftRs"><i class="fas fa-angle-double-left"></i></a>
+  <a NguCarouselNext class="rightRs"><i class="fas fa-angle-double-right"></i></a>
+  <ul class="ngucarouselPoint" NguCarouselPoint>
+    <li *ngFor="let i of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"
+        [style.background]="'url(' + carouselTileItems[i] + ')'"></li>
+  </ul>
+</ngu-carousel>

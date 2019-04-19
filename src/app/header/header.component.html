@@ -1,0 +1,85 @@
+<nav class="navbar bg-light fixed-top navbar-expand-lg navbar-light">
+
+    <a [routerLink]="['']" class="navbar-brand">
+        <object class="my-icon" data="../../assets/images/carloyi@3x.svg" type="image/svg+xml">
+            Carloyi Logo
+        </object>
+    </a>
+
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-target="#navbarSupportedContent"
+            data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ">
+
+            <li (click)="navbarCollapse()" class="nav-item ">
+                <a (click)="dropDown()" [routerLink]="['']" class="nav-link" routerLinkActive="active">
+                    <i class="fas fa-search"></i> Search
+                </a>
+            </li>
+
+            <li (click)="navbarCollapse()" class="nav-item ">
+                <a [routerLink]="['about']" class="nav-link" routerLinkActive="active">
+                    <i class="fas fa-book-open"></i> About
+                </a>
+            </li>
+
+            <li (click)="navbarCollapse()" class="nav-item ">
+                <a [routerLink]="['why']" class="nav-link" routerLinkActive="active">
+                    <i class="far fa-question-circle"></i> Why Carloyi
+                </a>
+            </li>
+
+            <!--
+              <li (click)="navbarCollapse()" class="nav-item ">
+                <a [routerLink]="['news']" routerLinkActive="active" class="nav-link">
+                    <i class="far fa-newspaper"></i> News
+                </a>
+              </li>
+            -->
+
+            <li (click)="navbarCollapse()" class="nav-item ">
+                <a [routerLink]="['contact']" class="nav-link" routerLinkActive="active">
+                    <i class="fas fa-phone"></i> Contact
+                </a>
+            </li>
+
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li (click)="navbarCollapse()" *ngIf="searchResults" class="nav-item animated fadeIn">
+                <a [routerLink]="['results']" class="nav-link" routerLinkActive="active">
+                    <i class="fas fa-list-ul"></i> Search Results
+                </a>
+            </li>
+
+            <li (click)="navbarCollapse()" *ngIf="loggedin; else login" class="nav-item animated fadeIn collapseItem">
+                <a [routerLink]="['showroom']" class="nav-link boldText" routerLinkActive="active">
+                    <i class="far fa-bookmark"></i> My Showroom
+                </a>
+            </li>
+
+            <ng-template #login>
+                <li (click)="navbarCollapse()" class="nav-item animated fadeIn collapseItem" id="signUp">
+                    <a [routerLink]="['register']" class="nav-link boldText" routerLinkActive="active">
+                        <i class="fas fa-user-plus"></i> Sign Up
+                    </a>
+                </li>
+
+                <li (click)="navbarCollapse()" class="nav-item animated fadeIn collapseItem" id="login">
+                    <a [routerLink]="['signin']" class="nav-link boldText" routerLinkActive="active">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
+                </li>
+            </ng-template>
+        </ul>
+
+    </div>
+
+</nav>
+

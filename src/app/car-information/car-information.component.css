@@ -1,0 +1,58 @@
+.modal-body img {
+  margin-bottom: 1.4rem;
+}
+
+.modal-body h4 {
+  background: #f7f8fa;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0.3rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #006885;
+}
+
+.modal-body h5 {
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: #aaa;
+}
+
+.modal-body p {
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.loginBtn {
+  background: #006885;
+  color: whitesmoke;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  border-radius: 0;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.loginBtn:hover {
+  background: #f9a45e;
+  -webkit-box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 80% !important;
+    margin: 6.75rem auto 1.75rem auto !important;
+  }
+}

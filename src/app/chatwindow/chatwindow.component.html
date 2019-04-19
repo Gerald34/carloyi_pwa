@@ -1,0 +1,35 @@
+<div *ngIf="chatActive; else chatInActive">
+  <section class="chatWindow">
+
+    <div class="window-header">
+      <!--Display User / Dealer Name-->
+      <div class="avatar">
+        <div class="avatar_image">
+          <img class="img-fluid" src="../../assets/images/avatar.png"/>
+        </div>
+        <div class="info">
+          <h4>{{ dealerInformation.name }}</h4>
+          <p>{{ dealerInformation.location }}</p>
+        </div>
+      </div>
+
+      <div class="openClose">
+        <a (click)="minimize()" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+    </div>
+
+    <div #scroller class="window-body" id="windowBody">
+      <!--Display Massages-->
+      <app-feed></app-feed>
+    </div>
+
+    <div class="window-footer" id="chatForm">
+      <app-chat-form [chatObject]="activeChatID"></app-chat-form>
+    </div>
+
+  </section>
+</div>
+
+<ng-template #chatInActive></ng-template>

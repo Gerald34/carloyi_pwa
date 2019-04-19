@@ -1,0 +1,53 @@
+<div class="row">
+
+  <div class="col-lg-12" style="margin-bottom: 40px;">
+    <div class="specials">
+      <h2><i class="fas fa-piggy-bank"></i> Special offers</h2>
+      <p>Discover a selection of cars with even bigger savings - for a limited time only!</p>
+    </div>
+  </div>
+
+  <div id="each_car" class="col-lg-4 col-md-6 col-sm-12 animated fadeIn" *ngFor="let special of specials">
+
+    <a *ngIf="special.total_score"
+       class="tooltips badge badge-info">
+      {{ special.total_score }}
+      <span>Rating</span>
+    </a>
+
+    <mat-card class="carObject" [id]="special.id" (click)="getCarInfo(itemID.value)">
+      <img mat-card-image [src]="(imagepath + special.car_image)">
+
+      <mat-card-content>
+
+        <mat-card-title>
+          <h4><i class="fas fa-car"></i> {{ special.name }}</h4>
+          <div class="seperator"></div>
+        </mat-card-title>
+
+        <mat-card-subtitle>
+
+          <h5>Retail Price |
+            <span>{{ special.price | currency:'ZAR':"symbol-narrow" }}</span>
+          </h5>
+
+          <h4 style="color: #54D98C; font-weight: 700;"><i class="fas fa-piggy-bank"></i> Discount | {{
+            special.discount | currency:'ZAR':"symbol-narrow" }} off
+          </h4>
+
+        </mat-card-subtitle>
+
+      </mat-card-content>
+
+      <mat-card-actions class="EntryCar">
+        <input #itemID class="itemID" type="hidden" [value]="special.model_id">
+        <button class="information" (click)="searchByModelID(itemID.value)">
+          <i class="fas fa-info-circle"></i> View Related Models
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    <!--<app-car-result [carResult]="filterCar"></app-car-result>-->
+  </div>
+
+</div>
+

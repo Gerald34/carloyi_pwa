@@ -1,0 +1,36 @@
+router-outlet {
+  z-index: 1000;
+}
+
+.routeContainer {}
+
+.routeContainer>* {
+  display: block;
+}
+
+.themeBTN {
+  color: whitesmoke;
+  padding: 0.6rem 45px;
+  font-weight: 600;
+  border-radius: 0;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 200px) {
+  app-footer {
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  app-footer {
+    bottom: 0;
+    position: relative;
+    width: 100%;
+  }
+}
