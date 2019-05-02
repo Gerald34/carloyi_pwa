@@ -5,6 +5,21 @@
     z-index: -10;
     padding: 10px 2px 20px 2px;
   }
+
+  .headerCol {
+    width: 100%;
+    z-index: 1010;
+    background: white;
+    padding-top: 3.2rem;
+    margin: 0;
+    top: 0;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .faded-bg {
+    margin: 0 auto 4rem auto;
+  }
 }
 
 @media (min-width: 768px) {
@@ -14,22 +29,26 @@
     z-index: -10;
     padding: 0;
   }
+
+  .headerCol {
+    width: 100%;
+    z-index: 1010;
+    position: fixed;
+    background: white;
+    padding-top: 3.2rem;
+    margin: 0 0 3rem 0;
+    top: 0;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+
+  .faded-bg {
+    margin: 11rem auto 4rem auto;
+  }
 }
 
 .invalidInput {
   border: 1px solid red;
-}
-
-.headerCol {
-  width: 100%;
-  z-index: 1010;
-  position: fixed;
-  background: white;
-  padding-top: 3.2rem;
-  margin: 0 0 3rem 0;
-  top: 0;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .userInfoContainer {
@@ -350,9 +369,7 @@ a.addCars {
   font-size: 1rem;
 }
 
-.faded-bg {
-  margin: 11rem auto 4rem auto;
-}
+
 
 .interested,
 .reject {

@@ -68,17 +68,6 @@ export class FilterSearchComponent implements OnInit {
   title: string;
   getCarID: string;
 
-  /**
-   * Constructor
-   * @param http
-   * @param storage
-   * @param afford
-   * @param loadingBar
-   * @param router
-   * @param utilService
-   * @param apiRequests
-   * @param toastr
-   */
   constructor(
     private http: HttpClient,
     @Inject(LOCAL_STORAGE) private storage: WebStorageService,
@@ -94,6 +83,11 @@ export class FilterSearchComponent implements OnInit {
    * Initialize
    */
   ngOnInit() {
+
+    $('.paginate').click(function() {
+      $("html, body").animate({ scrollTop: $(".allCars").offset().top }, 1000);
+    });
+
     $(".irs-with-grid")
       .find(".irs-single")
       .css("background", "#0000");

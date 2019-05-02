@@ -133,7 +133,7 @@ export class AffordabilityComponent implements OnInit, OnDestroy {
               this.storage.set('userInformation', loginReturn);
               this.login.watchLogin(loginInformation);
               this.loggedIn = true;
-              $('#login').modal('hide');
+              $('.login').modal('hide');
             } else {
               this.login.watchLogin('inactive');
               this.toastr.error(loginReturn.errorMessage, 'Could not sign in!');

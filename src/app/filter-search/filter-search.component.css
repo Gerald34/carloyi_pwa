@@ -478,11 +478,6 @@ label:hover.tooltips span {
   position: absolute;
 }
 
-.form-check {
-  justify-content: start !important;
-  width: 200px !important;
-}
-
 #each_car {
   z-index: 0 !important;
   margin-bottom: 20px;
@@ -652,9 +647,14 @@ a:hover.tooltips span {
     left: 0 !important;
     text-align: center;
   }
+
+  .form-check {
+    justify-content: start !important;
+    width: 201px !important;
+  }
 }
 
-@media only screen and (min-width: 200px) {
+@media(min-width: 200px) {
   .allCars {
     width: 100%;
     background-size: cover;
@@ -668,7 +668,12 @@ a:hover.tooltips span {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
+  .form-check {
+    justify-content: start !important;
+    width: 200px !important;
+  }
+
   .allCars {
     width: 100%;
     background-size: cover;
