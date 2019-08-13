@@ -609,6 +609,80 @@
 
 }
 
+@media (min-width: 1680px) {
+
+  .w-100 {
+    width: 100vw !important;
+    position: relative;
+    margin-top: 0;
+    height: 100vh;
+    max-height: 100vh;
+    background-size: cover;
+  }
+
+  .carousel-caption
+  {
+    top: 0;
+  }
+
+  .sliderContent {
+    color: #e6e6e6;
+    padding-left: 1.5rem;
+    margin: 31rem auto;
+    border-left: 1px solid #e6e6e6;
+    text-align: left;
+  }
+
+  .sliderContent h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 0.08rem;
+    text-shadow: 0 1px 2px #080808;
+  }
+
+  .sliderContent h1 span {
+    font-weight: 500;
+    text-shadow: 0 1px 2px #080808;
+  }
+
+  .sliderContent p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50%;
+    text-shadow: 0 1px 2px #080808;
+  }
+
+  .w-100:before {
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .explore {
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    background: #f9a45e;
+    border: 0 solid #e6e6e6;
+    color: #e6e6e6;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 0 !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+}
+
 .carousel {
   position: relative !important;
   touch-action: auto !important;

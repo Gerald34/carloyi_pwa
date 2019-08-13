@@ -154,7 +154,8 @@ import { SpecialCarsComponent } from './special-cars/special-cars.component';
     MatCheckboxModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+
   ],
   providers: [
     ClientProfileComponent,

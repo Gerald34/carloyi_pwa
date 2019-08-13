@@ -33,20 +33,15 @@ export class HeaderComponent implements OnInit {
     });
 
     if (this.data !== null) {
+
       if (typeof this.data.userData !== 'undefined' || typeof this.data.userData !== null) {
         this.userDataInfo = this.data.userData;
-
         if (this.userDataInfo === null) {
           this.loggedin = false;
         } else {
           this.loggedin = true;
         }
-
-      } else {
-        this.router.navigate(['']);
       }
-    } else {
-      this.router.navigate(['']);
     }
 
     this.login.userLoginSubject.subscribe((data: any) => {

@@ -138,11 +138,14 @@ export class ApiMethodsService {
    * For User Showroom
    * All HTTP Requests
    */
-
   public sendRequestNotification(offerData) {
     return this.http.post(this.constant.requestNotification, offerData);
   }
 
+  /**
+   *
+   * @param dealerID
+   */
   public notifyUser(dealerID) {
 
     this.push.requestSubscription({
@@ -155,6 +158,10 @@ export class ApiMethodsService {
     }).catch(err => console.error('Could not subscribe to notifications', err));
   }
 
+  /**
+   * @param subscription
+   * @param dealerID
+   */
   private saveSubscription(subscription, dealerID) {
 
     // Subscription Payload
@@ -166,6 +173,9 @@ export class ApiMethodsService {
     return this.http.post(this.constant.notificationSubscription, subscriptionData);
   }
 
+  /**
+   * @param filterData
+   */
   public filters(filterData) {
     return this.http.post(this.constant.filterSearch, filterData, this.constant.httpOptions);
   }

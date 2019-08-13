@@ -214,32 +214,10 @@ export class ShowroomComponent implements OnInit {
    */
   public showroomInformation(userID) {
     const userInformation = { uid: userID };
-    this.showroomCars(userInformation);
+    // this.showroomCars(userInformation);
   }
 
-  /**
-   * Get Cars
-   * @returns {Subscription}
-   */
-  public showroomCars(userInformation) {
-    return this.http.get(this.apiDomain + '/api/showroom/cars/' + userInformation.uid).subscribe((data: any) => {
-        this.apiReturn = data;
-        if (data.code === -1) {
-          this.empty = true;
-        } else {
-          this.empty = false;
-          this.allUserCars = data[0].data.cars.data;
-          this.page = 1;
-          $(function () {
-            if (data[0].code === 1) {
-              $('.footer').css('position', 'relative');
-            } else {
-              $('.footer').css('position', 'absolute');
-            }
-          });
-        }
-      });
-  }
+
 
   /**
    * Send Request
@@ -326,7 +304,6 @@ export class ShowroomComponent implements OnInit {
    * @private
    */
   private _updateProfile(updateProfileData: any) {
-
     return this.showroomService.updateUserInformation(updateProfileData).subscribe((data: any) => {
       if (typeof data.successCode !== 'undefined') {
         // Update current user data

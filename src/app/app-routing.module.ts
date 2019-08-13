@@ -21,6 +21,7 @@ import { ArticleComponent } from './article/article.component';
  * Application Routes
  */
 const routes: Routes = [
+  { path: '**', redirectTo: 'not-found' },
   { path: '', component: LandingComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'results', component: AffordabilityComponent },
@@ -33,16 +34,15 @@ const routes: Routes = [
   { path: 'date', component: BookATestDriveComponent },
   { path: 'password/:token', component: PasswordComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'article/:type/:slug', component: ArticleComponent },
+  { path: 'article/:slug', component: ArticleComponent, pathMatch: 'full'},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
+  imports: [RouterModule.forRoot(routes, { useHash: false })],
   exports: [RouterModule]
 })
 
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}
 
 export const routingComponents = [
   LandingComponent,

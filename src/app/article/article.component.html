@@ -1,21 +1,63 @@
-<div style="margin-top: 100px; margin-bottom: 50px" *ngIf="articleType === 'featured'; else blogArticles">
+<div style="margin-top: 50px; margin-bottom: 50px" *ngIf="articleType === 'featured'; else blogArticles">
   <div class="container">
     <div class="row">
+
       <div class="col-lg-8">
-        <h2>{{ article.featured_title }}</h2>
-        <div [innerHTML]="article.featured_story"></div>
+        <h2 class='articleTitle'>{{ article.featured_title }} <small> <i class="far fa-clock"></i> {{ article.created_at | date }}</small></h2>
+
+        <h4 class='article-caption'>
+          <article>
+            {{ article.featured_caption }}
+          </article>
+        </h4>
+
+        <img [src]="imagePath + '/storage/app/article/background/' + article.featured_background_image"
+             class='img-fluid article-image'/>
+
+        <div class="article-story" [innerHTML]="article.featured_story"></div>
       </div>
+
+      <div class="col-lg-4">
+        <div class="row">
+
+          <div class="col-lg-12">
+            <h2 class='articleTitle'>Other Articles</h2>
+          </div>
+
+          <div class="col-lg-6" *ngFor="let single of collection">
+            <a [routerLink]="['/article/' + single.article_slug]">
+              <img [src]="imagePath + '/storage/app/article/thumbnail/' + single.featured_thumbnail"
+                   class='img-fluid img-thumbnail img-responsive other'/>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
 <ng-template #blogArticles>
-  <div style="margin-top: 100px; margin-bottom: 50px;">
+  <div style="margin-top: 50px; margin-bottom: 50px;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <h2>{{ article.blog_title }}</h2>
-          <div [innerHTML]="article.blog_description"></div>
+
+          <h2 class='articleTitle'>{{ blogCollection.blog_title }} <small> <i class="far fa-clock"></i> {{ blogCollection.created_at | date }}</small>
+          </h2>
+
+        <h4 class='article-caption'>
+          <article>
+            {{ blogCollection.blog_caption }}
+          </article>
+        </h4>
+
+        <img [src]="imagePath + '/storage/app/article/background/' + blogCollection.blog_background"
+             class='img-fluid article-image'/>
+
+          <div [innerHTML]="blogCollection.blog_description"></div>
+
         </div>
       </div>
     </div>

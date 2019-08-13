@@ -27,7 +27,7 @@ export class ShowroomService {
    * Get User offers from dealers
    * @param userID
    */
-  getUserOffers(userID: number) {
+  public getUserOffers(userID: number) {
     return this.http.get(this.getOffers + userID);
   }
 

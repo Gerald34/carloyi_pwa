@@ -10,6 +10,8 @@ export class NewsComponent implements OnInit {
   featured: any;
   newsPosts: any;
   olderPosts: any;
+  articleCollection: any;
+  current: string;
   imagePath = this.uri.BlogImages;
   constructor(
     private blogService: BlogService,
@@ -19,7 +21,7 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.getNews();
     this.getOlderPosts();
-    this.getLatest();
+    this.getLatestArticle();
   }
 
   getNews() {
@@ -34,9 +36,16 @@ export class NewsComponent implements OnInit {
     });
   }
 
-  getLatest() {
-    this.blogService.latestPost().subscribe((data: any) => {
-      this.featured = data[0];
+  getLatestArticle() {
+    this.blogService.latestArticle().subscribe((data: any) => {
+      this.featured = data;
+      this.getOlderArticles(data.id);
+    });
+  }
+
+  getOlderArticles(current) {
+    this.blogService.getArticleCollection(current).subscribe((data: any) => {
+      this.articleCollection = data;
     });
   }
 

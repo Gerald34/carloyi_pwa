@@ -5,6 +5,7 @@ import { ToastrService } from "ngx-toastr";
 import { ShowroomService } from "../services/showroom/showroom.service";
 import { UriService } from "../services/uri/uri.service";
 import swal from 'sweetalert2';
+import { ShowroomComponent } from "../showroom/showroom.component";
 
 @Component({
   selector: "app-showroom-cars",
@@ -21,11 +22,12 @@ export class ShowroomCarsComponent implements OnInit {
   name: string;
 
   constructor(
-    @Inject(LOCAL_STORAGE) private storage: WebStorageService,
-    public login: LoginService,
-    private toastr: ToastrService,
-    private showroomService: ShowroomService,
-    private uri: UriService
+      @Inject(LOCAL_STORAGE) private storage: WebStorageService,
+      public login: LoginService,
+      private toastr: ToastrService,
+      private showroomService: ShowroomService,
+      private uri: UriService,
+      private showRoomMethods: ShowroomComponent
   ) {
     this.imagePath = this.uri.imagePath;
   }
@@ -87,15 +89,15 @@ export class ShowroomCarsComponent implements OnInit {
     }).then(result => {
       if (result.value) {
         this.showroomService.removeUserShowroomCar(itemID, uid)
-          .subscribe((data: any) => {
-            if (typeof data.successCode) {
-              this.toastr.error("Your Car has been deleted.", "Deleted!");
-              this.allUserCars = data[0].data.cars.data;
-            } else {
-              this.toastr.error(data.errorMessage, "Error", {});
-              this.allUserCars = null;
-            }
-          });
+            .subscribe((data: any) => {
+              if (typeof data.successCode) {
+                this.toastr.error("Your Car has been deleted.", "Deleted!");
+                this.allUserCars = data[0].data.cars.data;
+              } else {
+                this.toastr.error(data.errorMessage, "Error", {});
+                this.allUserCars = null;
+              }
+            });
       }
     });
   }
