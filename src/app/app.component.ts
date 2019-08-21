@@ -3,6 +3,7 @@ import { SearchService } from './services/search.service';
 import { Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router} from "@angular/router";
 import { MetatagsService } from './services/metatags/metatags.service';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ export class AppComponent implements OnInit {
       private route: ActivatedRoute,
       private router: Router,
       public searchService: SearchService,
-      private metaService: MetatagsService
+      private metaService: MetatagsService,
+      private location: Location
   ) {
     // this.meta.addTag({ name: 'og:url', content: 'https://www.carloyi.com' });
     // this.meta.addTag({ name: 'author', content: 'talkingdotnet' });
@@ -43,4 +45,10 @@ export class AppComponent implements OnInit {
       console.log(data);
     });
   }
+
+  // refresh(): void {
+  //   this.router.navigateByUrl('/article/:slug', { skipLocationChange: true }).then(() => {
+  //     this.router.navigate([decodeURI(this.location.path())]);
+  //   });
+  // }
 }
