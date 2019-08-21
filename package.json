@@ -36,6 +36,7 @@
     "@ngx-loading-bar/http": "^2.2.0",
     "@ngx-loading-bar/http-client": "^2.2.0",
     "@ngx-loading-bar/router": "^2.2.0",
+    "@ngx-meta/core": "^7.0.0",
     "@ngx-progressbar/core": "^5.1.2",
     "@types/express": "^4.16.0",
     "@types/socket.io": "^1.4.36",

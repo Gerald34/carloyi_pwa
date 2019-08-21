@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../services/blog/blog.service';
 import { UriService } from '../services/uri/uri.service';
-import { Article } from "../models/article.model";
-import { Collection } from "../models/collection.model";
-import { Blog } from "../models/blog.model";
+import { Article } from '../models/article.model';
+import { Collection } from '../models/collection.model';
+import { Blog } from '../models/blog.model';
+import { MetaService } from '@ngx-meta/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-article',
@@ -23,16 +25,15 @@ export class ArticleComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private blogService: BlogService,
-    private uri: UriService
+    private uri: UriService,
+    private meta: Meta
   ) { }
 
   ngOnInit() {
-    this.articleID = this.route.snapshot.params.slug;
-    this.featuredArticle(this.articleID);
-    // this.route.params.subscribe(params => {
-    //   this.articleID = params['slug'];
-    //   this.featuredArticle(this.articleID);
-    // });
+    this.route.params.subscribe(params => {
+      this.articleID = params['slug'];
+      this.featuredArticle(this.articleID);
+    });
   }
 
   /**

@@ -3,21 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Frontend Application</title>
-  <!--<title>Carloyi Online</title>-->
+  <title>Carloyi Online</title>
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Carloyi Online">
-  <meta name="description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car.">
+  <meta name="title" content="Carloyi Online"/>
+  <meta name="description"
+        content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car."/>
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.carloyi.com">
-  <meta property="og:title" content="Carloyi Online">
-  <meta property="og:description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car.">
-  <meta property="og:image" content="https://images.carloyi.com/P90332378-highRes--BMW-320d-Sport-line--1812-Pt.jpg">
-  <meta property="og:app_id" content="">
+  <meta property="og:url" content="https://www.carloyi.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Carloyi News Online"/>
+  <meta property="og:description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car." />
+
+  <meta property="og:image" content="assets/images/black_car.jpg"/>
+  <meta property="og:image:alt" content="3 books on ReduxJS. A sequel that takes you from beginner to pro." />
+  <meta property="og:image:type" content="image/jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
 
   <!-- Twitter -->
+  <meta property="og:app_id" content="2268914509893195"/>
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.carloyi.com">
   <meta property="twitter:title" content="Carloyi Online">
@@ -52,4 +58,44 @@
   <app-root></app-root>
 </body>
 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2268914509893195',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+    let js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {return;}
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+  function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
+  {
+    FB.ui({
+              method: 'share_open_graph',
+              action_type: 'og.likes',
+              action_properties: JSON.stringify({
+                object: {
+                  'og:url': overrideLink,
+                  'og:title': overrideTitle,
+                  'og:description': overrideDescription,
+                  'og:image': overrideImage
+                }
+              })
+            },
+            function (response) {
+              // Action after response
+            });
+  }
+</script>
 </html>

@@ -8,6 +8,12 @@ router-outlet {
   display: block;
 }
 
+router-outlet {
+  position: relative;
+  min-height: 100vh;
+  margin-bottom: 2.5rem;
+}
+
 .themeBTN {
   color: whitesmoke;
   padding: 0.6rem 45px;

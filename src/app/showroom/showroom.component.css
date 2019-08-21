@@ -442,7 +442,6 @@ a.addCars {
 
 .tabs {
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
   width: 100%;
   font-weight: 500 !important;
