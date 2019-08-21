@@ -21,7 +21,6 @@ import { ArticleComponent } from './article/article.component';
  * Application Routes
  */
 const routes: Routes = [
-  { path: '**', redirectTo: 'not-found' },
   { path: '', component: LandingComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'results', component: AffordabilityComponent },
@@ -34,7 +33,7 @@ const routes: Routes = [
   { path: 'date', component: BookATestDriveComponent },
   { path: 'password/:token', component: PasswordComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'article/:slug', component: ArticleComponent, pathMatch: 'full'},
+  { path: 'article/:slug', component: ArticleComponent },
 ];
 
 @NgModule({
