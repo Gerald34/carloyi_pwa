@@ -21,7 +21,7 @@ export class PushNotificationsService {
       this.saveSubscription(subscription, dealerID).subscribe((response: any) => {
       });
     }).catch(err => {
-      return { error: err, message: 'Could not subscribe to notifications' }
+      return { error: err, message: 'Could not subscribe to notifications' };
     });
   }
 
