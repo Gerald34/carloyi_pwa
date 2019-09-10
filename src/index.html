@@ -4,37 +4,36 @@
 <head>
   <meta charset="utf-8">
   <title>Carloyi Online</title>
-
+  <base href="/">
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Carloyi Online"/>
-  <meta name="description"
-        content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car."/>
+  <meta name="title" content="Carloyi Online">
+  <meta name="description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:url" content="https://www.carloyi.com" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Carloyi News Online"/>
-  <meta property="og:description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car." />
+  <meta property="og:url" content="https://www.carloyi.com">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Carloyi News Online">
+  <meta property="og:description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car.">
 
-  <meta property="og:image" content="https://www.carloyi.com/assets/images/black_car.jpg"/>
-  <meta property="og:image:alt" content="3 books on ReduxJS. A sequel that takes you from beginner to pro." />
-  <meta property="og:image:type" content="image/jpg" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
+  <meta property="og:image" content="https://www.carloyi.com/assets/images/carloyi_car.jpg">
+  <meta property="og:image:alt" content="It took me 3 days to get offers.">
+  <meta property="og:image:type" content="image/jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:app_id" content="2268914509893195">
 
   <!-- Twitter -->
-  <meta property="og:app_id" content="2268914509893195"/>
+
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.carloyi.com">
   <meta property="twitter:title" content="Carloyi Online">
   <meta property="twitter:description" content="Buy smart. It took me 3 days to get offers, test drive and then buy my car through Carloyi - ended up saving R60,000.00 on the market price. Help me find a car.">
-  <meta property="twitter:image" content="https://images.carloyi.com/P90332378-highRes--BMW-320d-Sport-line--1812-Pt.jpg">
+  <meta property="twitter:image" content="https://www.carloyi.com/assets/images/carloyi_car.jpg">
 
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <meta http-equiv="Cache-control" content="no-cache">
-  <meta http-equiv="Expires" content="-1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.icok">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -77,26 +76,5 @@
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<script>
-  function shareOverrideOGMeta(overrideLink, overrideTitle, overrideDescription, overrideImage)
-  {
-    FB.ui({
-              method: 'share_open_graph',
-              action_type: 'og.likes',
-              action_properties: JSON.stringify({
-                object: {
-                  'og:url': overrideLink,
-                  'og:title': overrideTitle,
-                  'og:description': overrideDescription,
-                  'og:image': overrideImage
-                }
-              })
-            },
-            function (response) {
-              // Action after response
-            });
-  }
 </script>
 </html>
