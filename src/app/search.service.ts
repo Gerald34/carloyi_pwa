@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 
 
@@ -9,7 +9,7 @@ export class SearchService {
   returnData: any;
   public resultsSubject = new Subject<any>();
   public userLoginSubject = new Subject<any>();
-  constructor(private http: Http) { }
+  constructor(private http: HttpClient) { }
 
   public storeSearchData(data) {
     this.getSearchResults(data);

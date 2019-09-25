@@ -1,7 +1,5 @@
 import {Inject, Injectable} from '@angular/core';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
-import * as firebase from 'firebase';
+import * as firebase from 'firebase/app';
 // import 'firebase/app';
 import { ChatMessage } from '../models/chat-message.model';
 import { Upload } from '../models/upload.module';
@@ -9,6 +7,10 @@ import { Subject } from 'rxjs/Subject';
 import { LOCAL_STORAGE, WebStorageService } from 'angular-webstorage-service';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { ShowroomService } from "./showroom/showroom.service";
+
+// Firebase
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @Injectable()
 export class ChatService {

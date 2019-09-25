@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiMethodsService } from '../services/api-methods.service';
 import { ToastrService } from 'ngx-toastr';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-newsletter',

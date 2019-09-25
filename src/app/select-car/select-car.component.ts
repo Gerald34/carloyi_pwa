@@ -4,7 +4,7 @@ import { SearchService } from "../services/search/search.service";
 import { Router } from "@angular/router";
 import { LOCAL_STORAGE, WebStorageService } from "angular-webstorage-service";
 import { ToastrService } from "ngx-toastr";
-
+import * as $ from 'jquery';
 @Component({
   selector: "app-select-car",
   templateUrl: "./select-car.component.html",

@@ -1,6 +1,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "core-js/es6/reflect": [
+        "node_modules/core-js/proposals/reflect-metadata"
+      ]
+    },
+    "downlevelIteration": true,
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -8,7 +14,7 @@
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "es2015",
     "strictFunctionTypes": true,
     "typeRoots": [
       "node_modules/@types"
@@ -17,9 +23,9 @@
       "es2017",
       "dom"
     ],
-    "module": "es2015",
+    "module": "esnext",
     "baseUrl": "./",
-    "types": ["node"],
+    // "types": ["jest"],
     "allowSyntheticDefaultImports": true
   }
 }

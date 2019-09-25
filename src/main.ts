@@ -11,7 +11,8 @@ if (environment.production) {
 
 const VAPID_PUBLIC_KEY = 'BLqOIE4Dh6Iac4pBEVO7Mt0e9eYwwn_sj80NPlk5atVQDE2SCayiWkU_tuJrBA1hB7PuWIvQekQ75PBt0CSJNkA';
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+document.addEventListener('DOMContentLoaded', () => {
+  platformBrowserDynamic().bootstrapModule(AppModule)
   .then(ref => {
     // Ensure Angular destroys itself on hot reloads.
     if (window['ngRef']) {
@@ -24,6 +25,7 @@ platformBrowserDynamic().bootstrapModule(AppModule)
       // send().catch(err => console.error(err));
     }
   }).catch(err => console.error(err));
+});
 
 async function send() {
   const register = await navigator.serviceWorker.register('/ngsw-worker.js');

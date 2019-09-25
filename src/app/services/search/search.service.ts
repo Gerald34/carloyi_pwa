@@ -24,7 +24,7 @@ export class SearchService {
 
   // Get all makes
   public getBrands() {
-    return this.http.get(this.brands);
+    return this.http.get(this.brands, this.uri.httpOptions);
   }
 
   // Search by affordability

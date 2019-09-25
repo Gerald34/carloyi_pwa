@@ -13,8 +13,8 @@ export class ApiMethodsService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'content-type'
+      'Access-Control-Allow-Origin': 'https://api.carloyi.com',
+      'Access-Control-Allow-Headers': 'content-type',
     })
   };
 

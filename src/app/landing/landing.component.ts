@@ -18,6 +18,7 @@ import {
 } from '@angular/router';
 import { SuitabilitySearchComponent } from '../suitability-search/suitability-search.component';
 import {SearchService} from '../services/search/search.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-landing',

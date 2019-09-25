@@ -1,0 +1,10 @@
+{
+  "/posts": {
+    "target": "https://api.carloyi.com",
+    "secure": true,
+    "pathRewrite": {
+      "^/posts": ""
+    },
+    "changeOrigin": true
+  }
+}

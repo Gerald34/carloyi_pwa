@@ -9,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class ChatwindowComponent implements OnInit {
 
-  @ViewChild('scroller') private feedContainer: ElementRef;
+  @ViewChild('scroller', { static: false }) private feedContainer: ElementRef;
   constructor(private chat: ChatService) { }
 
   @Input() chatInformation: any;

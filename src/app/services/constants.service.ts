@@ -12,8 +12,10 @@ export class ConstantsService {
   // Set HTTP Headers
   httpOptions = {
     headers: new HttpHeaders({
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'content-type',
     })
   };
 

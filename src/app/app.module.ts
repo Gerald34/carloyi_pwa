@@ -42,6 +42,7 @@ import { SearchOptionsComponent } from "./search-options/search-options.componen
 import { ImageDialogComponent } from "./image-dialog/image-dialog.component";
 import { GetCarInformationComponent } from "./get-car-information/get-car-information.component";
 import { ShowroomCarsComponent } from "./showroom-cars/showroom-cars.component";
+import { SpecialCarsComponent } from './special-cars/special-cars.component';
 
 // Services
 import { ChatService } from "./services/chat.service";
@@ -54,34 +55,44 @@ import { AuthService } from "./services/auth.service";
 import { ConstantsService } from "./services/constants.service";
 import { GeneralService } from "./services/general/general.service";
 
-// import third-party module
+// Other third-party modules
 import { NgxPaginationModule } from "ngx-pagination";
 import { StorageServiceModule } from "angular-webstorage-service";
 import { IonRangeSliderModule } from "ng2-ion-range-slider";
 import { ToastrModule } from "ngx-toastr";
-import { AngularFireModule } from "angularfire2";
-import { AngularFireDatabaseModule } from "angularfire2/database";
-import { AngularFirestoreModule } from "angularfire2/firestore";
-import { AngularFireStorageModule } from "angularfire2/storage";
-import { AngularFireAuthModule } from "angularfire2/auth";
+
+// Angular Material
 import { MatCardModule } from "@angular/material/card";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatIconModule } from "@angular/material/icon";
 import { NguCarouselModule } from "@ngu/carousel";
 import { NgxMaterialTimepickerModule } from "ngx-material-timepicker";
 import { NgbDatepickerModule } from "@ng-bootstrap/ng-bootstrap";
-import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
-import { LoadingBarRouterModule } from "@ngx-loading-bar/router";
-import { ImageZoomModule } from "angular2-image-zoom";
-import { InlineSVGModule } from "ng-inline-svg";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSelectModule } from "@angular/material/select";
+
+// Loading bar
+import { LoadingBarHttpClientModule } from "@ngx-loading-bar/http-client";
+import { LoadingBarRouterModule } from "@ngx-loading-bar/router";
+import { ImageZoomModule } from "angular2-image-zoom";
+import { InlineSVGModule } from "ng-inline-svg";
+
+// Bootstrap
 import { MDBBootstrapModule } from "angular-bootstrap-md";
+
+// Angular Firebase
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 // Pipes
 import { SortByPipe } from "./pipes/sort-by.pipe";
-import { SpecialCarsComponent } from './special-cars/special-cars.component';
+
+import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -121,7 +132,7 @@ import { SpecialCarsComponent } from './special-cars/special-cars.component';
     SpecialCarsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ServiceWorkerModule.register("/ngsw-worker.js", {
       enabled: environment.production
     }),
@@ -176,4 +187,12 @@ import { SpecialCarsComponent } from './special-cars/special-cars.component';
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(
+      @Inject(PLATFORM_ID) private platformId: Object,
+      @Inject(APP_ID) private appId: string) {
+    const platform = isPlatformBrowser(platformId) ?
+        'on the server' : 'in the browser';
+    console.log('Running ${platform} with appId=${appId}');
+  }
+}

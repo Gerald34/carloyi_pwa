@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../services/login.service';
-import {stringify} from 'querystring';
-import {Observable} from 'rxjs';
 @Component({
   selector: 'app-image-dialog',
   templateUrl: './image-dialog.component.html',
