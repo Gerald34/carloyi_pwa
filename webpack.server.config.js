@@ -2,6 +2,7 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const regex = /firebase\/(app|firestore)/;
 
 module.exports = {
   mode: 'none',
@@ -19,6 +20,14 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
+  externals: [/node_modules/, function(context, request, callback) {
+
+    // exclude firebase products from being bundled, so they will be loaded using require() at runtime.
+    if(regex.test(request)) {
+      return callback(null, 'commonjs ' + request);
+    }
+    callback();
+  }],
   module: {
     rules: [
       { test: /\.ts$/, loader: 'ts-loader' },
