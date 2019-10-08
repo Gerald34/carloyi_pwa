@@ -25,6 +25,7 @@
     ],
     "module": "esnext",
     "baseUrl": "./",
+    "types": ["jest"],
     // "types": ["jest"],
     "allowSyntheticDefaultImports": true
   }
