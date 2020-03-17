@@ -1,5 +1,5 @@
 import {Inject, Injectable} from '@angular/core';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 // import 'firebase/app';
 import { ChatMessage } from '../models/chat-message.model';
 import { Upload } from '../models/upload.module';

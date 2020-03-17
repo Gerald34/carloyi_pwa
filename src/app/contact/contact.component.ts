@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-
+import { SeoService } from '@trilon/ng-universal';
 // HTTP Modules
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -23,7 +23,13 @@ export class ContactComponent implements OnInit {
       private http: HttpClient,
       @Inject(LOCAL_STORAGE) private storage: WebStorageService,
       private router: Router,
-    ) { }
+      private seo: SeoService
+    ) {
+      this.seo.update({
+        title: 'Contact Carloyi',
+        url: 'https:www.carloyi.com/contact'
+      });
+    }
 
   ngOnInit() {
     window.scrollTo(0, 0);

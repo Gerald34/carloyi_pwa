@@ -3,7 +3,7 @@ import { ChatService } from '../services/chat.service';
 import { AuthService } from '../services/auth.service';
 import { ChatMessage } from '../models/chat-message.model';
 import {Observable} from 'rxjs';
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { Lightbox } from 'ngx-lightbox';
 import { MatDialog } from '@angular/material';
 import { ImageDialogComponent } from '../image-dialog/image-dialog.component';

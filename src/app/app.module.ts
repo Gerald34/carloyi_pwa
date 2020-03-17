@@ -93,6 +93,7 @@ import { SortByPipe } from "./pipes/sort-by.pipe";
 
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { NgUniversalModule } from '@trilon/ng-universal';
 
 @NgModule({
   declarations: [
@@ -157,6 +158,7 @@ import { isPlatformBrowser } from '@angular/common';
     NgxMaterialTimepickerModule.forRoot(),
     NgbDatepickerModule,
     MDBBootstrapModule,
+    NgUniversalModule,
     // Material
     MatButtonModule,
     MatCheckboxModule,
